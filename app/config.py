@@ -16,7 +16,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 
 REPORT_DIR = os.path.join(BASE_DIR, "통학구역별 재학생 현황 보고")
 ADMIN_CONFIG_PATH = os.path.join(ADMIN_DIR, "admin_config.json")
-DATASET_META_PATH = os.path.join(GENERATED_DIR, "dataset_meta.json")
+DATASET_META_PATH = os.path.join(RUNTIME_DIR, "dataset_meta.json") if IS_VERCEL else os.path.join(GENERATED_DIR, "dataset_meta.json")
 
 
 @dataclass(frozen=True)
