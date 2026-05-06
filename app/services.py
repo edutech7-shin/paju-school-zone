@@ -602,29 +602,37 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         aggregate[(sheet_name, row_number)][grade_col] += 1
         aggregate[(sheet_name, row_number)]["계"] += 1
 
-    workbook = load_workbook(config.data_sources.report_template_source)
-    if display_base_date:
-        for sheet_name in workbook.sheetnames:
+    output = BytesIO()
+    if os.path.exists(config.data_sources.report_template_source):
+        workbook = load_workbook(config.data_sources.report_template_source)
+        if display_base_date:
+            for sheet_name in workbook.sheetnames:
+                ws = workbook[sheet_name]
+                if sheet_name == "재학생 현황(관내)":
+                    ws["L3"] = f"기준일: {display_base_date}"
+                elif sheet_name == "재학생 현황(관외)":
+                    ws["M3"] = f"기준일: {display_base_date}"
+
+        for (sheet_name, row_number), row_data in aggregate.items():
             ws = workbook[sheet_name]
             if sheet_name == "재학생 현황(관내)":
-                ws["L3"] = f"기준일: {display_base_date}"
-            elif sheet_name == "재학생 현황(관외)":
-                ws["M3"] = f"기준일: {display_base_date}"
-
-    for (sheet_name, row_number), row_data in aggregate.items():
-        ws = workbook[sheet_name]
-        if sheet_name == "재학생 현황(관내)":
-            start_col = 5
-            total_col = 11
-        else:
-            start_col = 6
-            total_col = 12
-        for offset, column in enumerate(GRADE_COLUMNS):
-            ws.cell(row=row_number, column=start_col + offset, value=row_data[column])
-        ws.cell(row=row_number, column=total_col, value=row_data["계"])
-
-    output = BytesIO()
-    workbook.save(output)
+                start_col = 5
+                total_col = 11
+            else:
+                start_col = 6
+                total_col = 12
+            for offset, column in enumerate(GRADE_COLUMNS):
+                ws.cell(row=row_number, column=start_col + offset, value=row_data[column])
+            ws.cell(row=row_number, column=total_col, value=row_data["계"])
+        workbook.save(output)
+    else:
+        fallback_rows = list(aggregate.values())
+        fallback_rows.sort(key=lambda row: (row["sheet_name"], row["row_number"]))
+        fallback_df = pd.DataFrame(fallback_rows)
+        with pd.ExcelWriter(output, engine="openpyxl") as writer:
+            fallback_df.to_excel(writer, sheet_name="집계결과", index=False)
+            if display_base_date:
+                pd.DataFrame([{"기준일": display_base_date}]).to_excel(writer, sheet_name="메타", index=False)
     output.seek(0)
 
     table_rows = [
@@ -721,29 +729,37 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
                 summary_bucket[grade_col] = sum(row[grade_col] for row in normal_and_special_rows)
             summary_bucket["계"] = sum(row["계"] for row in normal_and_special_rows)
 
-        requested_workbook = load_workbook(config.data_sources.report_template_source)
-        if display_base_date:
-            for sheet_name in requested_workbook.sheetnames:
+        requested_output = BytesIO()
+        if os.path.exists(config.data_sources.report_template_source):
+            requested_workbook = load_workbook(config.data_sources.report_template_source)
+            if display_base_date:
+                for sheet_name in requested_workbook.sheetnames:
+                    ws = requested_workbook[sheet_name]
+                    if sheet_name == "재학생 현황(관내)":
+                        ws["L3"] = f"기준일: {display_base_date}"
+                    elif sheet_name == "재학생 현황(관외)":
+                        ws["M3"] = f"기준일: {display_base_date}"
+
+            for (sheet_name, row_number), row_data in requested_aggregate.items():
                 ws = requested_workbook[sheet_name]
                 if sheet_name == "재학생 현황(관내)":
-                    ws["L3"] = f"기준일: {display_base_date}"
-                elif sheet_name == "재학생 현황(관외)":
-                    ws["M3"] = f"기준일: {display_base_date}"
-
-        for (sheet_name, row_number), row_data in requested_aggregate.items():
-            ws = requested_workbook[sheet_name]
-            if sheet_name == "재학생 현황(관내)":
-                start_col = 5
-                total_col = 11
-            else:
-                start_col = 6
-                total_col = 12
-            for offset, column in enumerate(GRADE_COLUMNS):
-                ws.cell(row=row_number, column=start_col + offset, value=row_data[column])
-            ws.cell(row=row_number, column=total_col, value=row_data["계"])
-
-        requested_output = BytesIO()
-        requested_workbook.save(requested_output)
+                    start_col = 5
+                    total_col = 11
+                else:
+                    start_col = 6
+                    total_col = 12
+                for offset, column in enumerate(GRADE_COLUMNS):
+                    ws.cell(row=row_number, column=start_col + offset, value=row_data[column])
+                ws.cell(row=row_number, column=total_col, value=row_data["계"])
+            requested_workbook.save(requested_output)
+        else:
+            requested_rows = list(requested_aggregate.values())
+            requested_rows.sort(key=lambda row: (row["sheet_name"], row["row_number"]))
+            requested_df = pd.DataFrame(requested_rows)
+            with pd.ExcelWriter(requested_output, engine="openpyxl") as writer:
+                requested_df.to_excel(writer, sheet_name="우리학교집계", index=False)
+                if display_base_date:
+                    pd.DataFrame([{"기준일": display_base_date}]).to_excel(writer, sheet_name="메타", index=False)
         requested_output.seek(0)
         requested_school_workbook = requested_output.getvalue()
 
