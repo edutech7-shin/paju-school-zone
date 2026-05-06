@@ -88,6 +88,31 @@ def _read_json(path: str) -> list[dict[str, Any]]:
         return json.load(file)
 
 
+def _source_exists(path: str) -> bool:
+    return bool(path) and os.path.exists(path)
+
+
+def _load_or_build_dataset(
+    dataset_path: str,
+    source_paths: list[str],
+    build_fn,
+    force_rebuild: bool = False,
+):
+    source_ready = all(_source_exists(path) for path in source_paths)
+    dataset_exists = os.path.exists(dataset_path)
+
+    if force_rebuild and source_ready:
+        return build_fn()
+    if source_ready and _is_stale(dataset_path, source_paths):
+        return build_fn()
+    if dataset_exists:
+        return _read_json(dataset_path)
+    if source_ready:
+        return build_fn()
+    missing = ", ".join(path for path in source_paths if not _source_exists(path))
+    raise FileNotFoundError(f"필수 원본 파일이 없고 사전 생성 데이터셋도 없습니다: {missing}")
+
+
 def build_admin_dataset() -> list[dict[str, Any]]:
     config = load_admin_config()
     dataset_paths = get_dataset_paths()
@@ -272,24 +297,30 @@ def ensure_datasets() -> dict[str, list[dict[str, Any]]]:
     meta = get_dataset_meta()
     config_changed = meta.get("source_signature") != sources
 
-    if config_changed or _is_stale(dataset_paths["admin"], [config.data_sources.admin_source]):
+    admin = _load_or_build_dataset(
+        dataset_path=dataset_paths["admin"],
+        source_paths=[config.data_sources.admin_source],
+        build_fn=build_admin_dataset,
+        force_rebuild=config_changed,
+    )
+    if admin and admin[0].get("dataset_version") != 3 and _source_exists(config.data_sources.admin_source):
         admin = build_admin_dataset()
-    else:
-        admin = _read_json(dataset_paths["admin"])
-        if admin and admin[0].get("dataset_version") != 3:
-            admin = build_admin_dataset()
 
-    if config_changed or _is_stale(dataset_paths["report_template"], [config.data_sources.report_template_source]):
-        report = build_report_template_dataset()
-    else:
-        report = _read_json(dataset_paths["report_template"])
+    report = _load_or_build_dataset(
+        dataset_path=dataset_paths["report_template"],
+        source_paths=[config.data_sources.report_template_source],
+        build_fn=build_report_template_dataset,
+        force_rebuild=config_changed,
+    )
 
-    if config_changed or _is_stale(dataset_paths["school_zones"], [config.data_sources.school_zone_source]):
+    zones = _load_or_build_dataset(
+        dataset_path=dataset_paths["school_zones"],
+        source_paths=[config.data_sources.school_zone_source],
+        build_fn=build_school_zone_dataset,
+        force_rebuild=config_changed,
+    )
+    if zones and ("tong_key" not in zones[0] or "zone_tokens" not in zones[0]) and _source_exists(config.data_sources.school_zone_source):
         zones = build_school_zone_dataset()
-    else:
-        zones = _read_json(dataset_paths["school_zones"])
-        if zones and ("tong_key" not in zones[0] or "zone_tokens" not in zones[0]):
-            zones = build_school_zone_dataset()
 
     save_dataset_meta({"source_signature": sources})
 

@@ -185,6 +185,9 @@ def render_progress_page(job_id: str) -> bytes:
 
 def render_admin_page(message: str = "", error: str = "") -> bytes:
     config = load_admin_config()
+    is_vercel = bool(os.getenv("VERCEL"))
+    source_readonly = "readonly" if is_vercel else ""
+    source_note = "Vercel 배포에서는 로컬 원본 경로 대신 저장소의 사전 생성 JSON 데이터셋을 사용합니다." if is_vercel else "내부망 로컬 서버에서는 원본 엑셀 경로를 지정해 데이터셋을 다시 생성할 수 있습니다."
     note = f'<div class="error">{esc(error)}</div>' if error else (f'<div class="hint">{esc(message)}</div>' if message else "")
     html = f"""
     <!doctype html>
@@ -200,6 +203,7 @@ def render_admin_page(message: str = "", error: str = "") -> bytes:
           <section class="panel">
             <h1>관리자 설정</h1>
             <p class="hint">로그인 없이 내부망에서 쓰는 배포용 설정 화면입니다. 저장 후 다음 처리부터 즉시 반영됩니다.</p>
+            <p class="hint">{esc(source_note)}</p>
             {note}
             <form method="post" action="/admin" class="stack">
               <label for="app_title">프로그램 제목</label>
@@ -215,13 +219,13 @@ def render_admin_page(message: str = "", error: str = "") -> bytes:
               <label for="cleanup_interval_seconds">정리 주기(초)</label>
               <input id="cleanup_interval_seconds" type="number" name="cleanup_interval_seconds" value="{config.runtime.cleanup_interval_seconds}" required>
               <label for="admin_source">통·리·반 원본 파일</label>
-              <input id="admin_source" type="text" name="admin_source" value="{esc(config.data_sources.admin_source)}" required>
+              <input id="admin_source" type="text" name="admin_source" value="{esc(config.data_sources.admin_source)}" required {source_readonly}>
               <label for="report_template_source">보고서 서식 파일</label>
-              <input id="report_template_source" type="text" name="report_template_source" value="{esc(config.data_sources.report_template_source)}" required>
+              <input id="report_template_source" type="text" name="report_template_source" value="{esc(config.data_sources.report_template_source)}" required {source_readonly}>
               <label for="school_zone_source">학교 통학구역 파일</label>
-              <input id="school_zone_source" type="text" name="school_zone_source" value="{esc(config.data_sources.school_zone_source)}" required>
+              <input id="school_zone_source" type="text" name="school_zone_source" value="{esc(config.data_sources.school_zone_source)}" required {source_readonly}>
               <label for="legacy_district_source">보조 관할구역 파일(선택)</label>
-              <input id="legacy_district_source" type="text" name="legacy_district_source" value="{esc(config.data_sources.legacy_district_source)}">
+              <input id="legacy_district_source" type="text" name="legacy_district_source" value="{esc(config.data_sources.legacy_district_source)}" {source_readonly}>
               <button type="submit">설정 저장</button>
             </form>
           </section>
