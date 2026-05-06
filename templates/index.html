@@ -9,7 +9,7 @@
   <body>
     <main class="shell">
       <section class="hero">
-        <p class="eyebrow">와석초등학교 업무효율화 연구학교</p>
+        <p class="eyebrow">와석초 업무효율화 연구학교</p>
         <h1>{{APP_TITLE}}</h1>
         <p class="lede">
           나이스 명렬표 기반 통학구역별 재학생 현황 조사 프로그램
@@ -24,18 +24,22 @@
           <input id="school_name" type="text" name="school_name" list="school-list" placeholder="예: 와석초" required>
           <datalist id="school-list">{{SCHOOL_OPTIONS}}</datalist>
           <p class="hint">
-            학교명은 필수 입력이며, 기준일은 달력에서 선택할 수 있습니다.
+            학교명은 필수 입력 사항입니다..
           </p>
           <label for="base_date">기준일(선택)</label>
           <input id="base_date" type="date" name="base_date">
-
+          <p class="hint">
+            기준일은 달력에서 선택할 수 있습니다.
+          </p>
           <label for="files">학생 주소록 엑셀</label>
           <input id="files" type="file" name="files" accept=".xlsx" multiple>
           <p class="hint compact">
           <ol class="guide-list">
             <li>나이스 학생 명렬표에서 학년을 선택하세요.</li>
-            <li>우편번호와 주소 항목을 추가한 후 조회한 후 엑셀 파일로 다운받으세요.</li>
-            <li>여러 개의 파일을 한 번에 선택할 수 있습니다.</li>
+            <li>명렬표 항목 선택에서 우편번호와 주소 항목을 추가하여 명렬표를 조회한 후 엑셀 파일로 다운받으세요.</li>
+            <li>같은 방법으로 각 학년별 명렬표를 다운로드 받아 놓으세요.</li>
+            <li>위의 파일 선택을 클릭하여 모든 학년의 명렬표 엑셀 파일을 선택해줍니다.</li>
+            <li>아래의 보고서 생성 버튼을 눌러 결과를 확인합니다.</li>
           </ol>
           </p>
           <div id="selected-files" class="selected-files">선택된 파일 없음</div>
