@@ -66,14 +66,15 @@ class Config:
     # 프로젝트 디렉토리를 기본 작업 위치로 사용
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     BASE_DIR = os.getenv("ADDRESS_CONVERT_BASE_DIR", SCRIPT_DIR)
+    RUNTIME_DIR = "/tmp/addressConvert" if os.getenv("VERCEL") else BASE_DIR
     
     # 파일 경로
     INPUT_FILE = os.path.join(BASE_DIR, "전체_도로명주소_지번주소_변환용.xlsx")
-    OUTPUT_FILE = os.path.join(BASE_DIR, "지번주소_변환결과.xlsx")
-    TEMP_FILE = os.path.join(BASE_DIR, "지번주소_변환결과_임시.xlsx")
-    FAILED_FILE = os.path.join(BASE_DIR, "지번주소_변환실패목록.xlsx")
-    CACHE_FILE = os.path.join(BASE_DIR, "주소변환_캐시.pkl")
-    LOG_DIR = os.path.join(BASE_DIR, "주소변환_로그")
+    OUTPUT_FILE = os.path.join(RUNTIME_DIR, "지번주소_변환결과.xlsx")
+    TEMP_FILE = os.path.join(RUNTIME_DIR, "지번주소_변환결과_임시.xlsx")
+    FAILED_FILE = os.path.join(RUNTIME_DIR, "지번주소_변환실패목록.xlsx")
+    CACHE_FILE = os.path.join(RUNTIME_DIR, "주소변환_캐시.pkl")
+    LOG_DIR = os.path.join(RUNTIME_DIR, "주소변환_로그")
     
     # 성능 설정
     MAX_WORKERS = 4                # 동시 실행할 작업자 수
@@ -96,8 +97,12 @@ class CustomLogger:
         self.logger.handlers = []  # 기존 핸들러 제거
         
         # 로그 디렉토리 생성
-        if not os.path.exists(log_dir):
-            os.makedirs(log_dir)
+        try:
+            if not os.path.exists(log_dir):
+                os.makedirs(log_dir, exist_ok=True)
+        except OSError:
+            log_dir = os.path.join("/tmp", "addressConvert", "주소변환_로그")
+            os.makedirs(log_dir, exist_ok=True)
         
         # 로그 파일 경로
         log_file = os.path.join(log_dir, f"address_converter_{datetime.now().strftime('%Y%m%d')}.log")

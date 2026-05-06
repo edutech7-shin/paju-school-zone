@@ -1,6 +1,9 @@
 from __future__ import annotations
 
-import cgi
+try:
+    import cgi
+except ModuleNotFoundError:  # Python 3.13+ compatibility
+    cgi = None
 from html import escape
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -298,6 +301,12 @@ class AppHandler(BaseHTTPRequestHandler):
         self.send_error(HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:
+        if cgi is None:
+            self._send_html(
+                render_index(error="현재 Python 런타임에서 cgi 모듈이 없어 로컬 POST 처리를 사용할 수 없습니다."),
+                status=500,
+            )
+            return
         if self.path == "/admin":
             self._handle_admin_post()
             return
@@ -338,6 +347,9 @@ class AppHandler(BaseHTTPRequestHandler):
             self._send_html(render_index(error=str(exc)), status=400)
 
     def _handle_admin_post(self) -> None:
+        if cgi is None:
+            self._send_html(render_admin_page(error="현재 Python 런타임에서 cgi 모듈을 사용할 수 없습니다."), status=500)
+            return
         form = cgi.FieldStorage(
             fp=self.rfile,
             headers=self.headers,
