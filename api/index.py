@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from flask import Flask, Response, jsonify, redirect, request, send_from_directory
+from urllib.parse import quote
+
+from flask import Flask, Response, jsonify, request
 
 from app.datasets import ensure_datasets
 from app.server import render_index, render_progress_page
@@ -13,7 +15,7 @@ from app.services import (
 )
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../static", static_url_path="/static")
 start_cleanup_worker()
 
 
@@ -77,7 +79,9 @@ def download(result_id: str, kind: str):
         payload,
         mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     )
-    response.headers["Content-Disposition"] = f"attachment; filename={filename}; filename*=UTF-8''{display_name}"
+    response.headers["Content-Disposition"] = (
+        f"attachment; filename=\"{filename}\"; filename*=UTF-8''{quote(display_name)}"
+    )
     return response
 
 
@@ -89,11 +93,6 @@ def get_job_state(job_id: str):
     return jsonify(job)
 
 
-@app.get("/static/<path:resource_path>")
-def static_files(resource_path: str):
-    return send_from_directory("static", resource_path)
-
-
 @app.errorhandler(404)
 def not_found(_error):
-    return redirect("/")
+    return Response("Not Found", status=404, mimetype="text/plain")
