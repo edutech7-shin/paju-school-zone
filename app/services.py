@@ -12,6 +12,7 @@ from uuid import uuid4
 
 import pandas as pd
 from openpyxl import load_workbook
+import requests
 
 from addressConverter import get_jibeon_address
 from mapping_final import (
@@ -83,6 +84,31 @@ def _load_fallback_district_ranges(source_path: str) -> pd.DataFrame:
         return parsed
     except Exception:
         return pd.DataFrame(columns=empty_columns)
+
+
+def _resolve_report_template_path(source_path: str) -> str:
+    """
+    1) 로컬 경로가 있으면 우선 사용
+    2) 없으면 REPORT_TEMPLATE_URL에서 /tmp 캐시에 1회 다운로드 후 사용
+    """
+    if source_path and os.path.exists(source_path):
+        return source_path
+
+    template_url = os.getenv("REPORT_TEMPLATE_URL", "").strip()
+    if not template_url:
+        return ""
+
+    cache_dir = os.path.join("/tmp", "addressConvert", "templates")
+    os.makedirs(cache_dir, exist_ok=True)
+    cached_template_path = os.path.join(cache_dir, "report_template.xlsx")
+    if os.path.exists(cached_template_path):
+        return cached_template_path
+
+    response = requests.get(template_url, timeout=30)
+    response.raise_for_status()
+    with open(cached_template_path, "wb") as file:
+        file.write(response.content)
+    return cached_template_path
 
 
 def clear_context_cache() -> None:
@@ -579,6 +605,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
     context = get_context()
     config = load_admin_config()
     display_base_date = _format_base_date(base_date)
+    template_path = _resolve_report_template_path(config.data_sources.report_template_source)
     aggregate: dict[tuple[str, int], dict[str, Any]] = {}
     report_records = context.report_template_records
     for record in report_records:
@@ -603,8 +630,8 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         aggregate[(sheet_name, row_number)]["계"] += 1
 
     output = BytesIO()
-    if os.path.exists(config.data_sources.report_template_source):
-        workbook = load_workbook(config.data_sources.report_template_source)
+    if template_path and os.path.exists(template_path):
+        workbook = load_workbook(template_path)
         if display_base_date:
             for sheet_name in workbook.sheetnames:
                 ws = workbook[sheet_name]
@@ -730,8 +757,8 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
             summary_bucket["계"] = sum(row["계"] for row in normal_and_special_rows)
 
         requested_output = BytesIO()
-        if os.path.exists(config.data_sources.report_template_source):
-            requested_workbook = load_workbook(config.data_sources.report_template_source)
+        if template_path and os.path.exists(template_path):
+            requested_workbook = load_workbook(template_path)
             if display_base_date:
                 for sheet_name in requested_workbook.sheetnames:
                     ws = requested_workbook[sheet_name]
