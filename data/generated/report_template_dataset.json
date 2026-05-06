@@ -1,0 +1,7728 @@
+[
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 6,
+    "school_name": "가온초",
+    "admin_area": "운정1동",
+    "tong_ri": "14통 1~20반",
+    "extra_area": "해솔마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통1~20반",
+    "extra_tokens": [
+      "해솔마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 7,
+    "school_name": "가온초",
+    "admin_area": "운정1동",
+    "tong_ri": "14통 21반",
+    "extra_area": "운정아이파크더테라스",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통21반",
+    "extra_tokens": [
+      "운정아이파크더테라스"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 8,
+    "school_name": "가온초",
+    "admin_area": "운정1동",
+    "tong_ri": "14통 22반",
+    "extra_area": "운정호수공원 누메르",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통22반",
+    "extra_tokens": [
+      "운정호수공원",
+      "누메르"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 9,
+    "school_name": "가온초",
+    "admin_area": "운정2동",
+    "tong_ri": "9~10통",
+    "extra_area": "해솔마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9~10통",
+    "extra_tokens": [
+      "해솔마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 10,
+    "school_name": "가온초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "운정신도시라피아노 2, 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "운정신도시라피아노",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 11,
+    "school_name": "가온초",
+    "admin_area": "운정2동",
+    "tong_ri": "16~17통",
+    "extra_area": "해솔마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16~17통",
+    "extra_tokens": [
+      "해솔마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 12,
+    "school_name": "가온초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 13,
+    "school_name": "가온초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 14,
+    "school_name": "갈현초",
+    "admin_area": "탄현면",
+    "tong_ri": "성동리 일부",
+    "extra_area": "298-7~298-17, 694~700, 692-21,692-22, 산71-2~산71-10번지 제외",
+    "note": "",
+    "category": "normal",
+    "tong_key": "성동리일부",
+    "extra_tokens": [
+      "298",
+      "298",
+      "17",
+      "694",
+      "700",
+      "692",
+      "21",
+      "692",
+      "22",
+      "산71",
+      "산71",
+      "10번지",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 15,
+    "school_name": "갈현초",
+    "admin_area": "탄현면",
+    "tong_ri": "법흥2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법흥2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 16,
+    "school_name": "갈현초",
+    "admin_area": "탄현면",
+    "tong_ri": "갈현1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "갈현1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 17,
+    "school_name": "갈현초",
+    "admin_area": "제한적 공동통학구역",
+    "tong_ri": "-",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "-",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 18,
+    "school_name": "갈현초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 19,
+    "school_name": "갈현초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 20,
+    "school_name": "검산초",
+    "admin_area": "금촌3동",
+    "tong_ri": "6통",
+    "extra_area": "대방아파트",
+    "note": "",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "대방아파트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 21,
+    "school_name": "검산초",
+    "admin_area": "금촌3동",
+    "tong_ri": "9~11통",
+    "extra_area": "검산동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9~11통",
+    "extra_tokens": [
+      "검산동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 22,
+    "school_name": "검산초",
+    "admin_area": "금촌3동",
+    "tong_ri": "12~14통",
+    "extra_area": "맥금동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "12~14통",
+    "extra_tokens": [
+      "맥금동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 23,
+    "school_name": "검산초",
+    "admin_area": "금촌3동",
+    "tong_ri": "20통",
+    "extra_area": "성원 포레스트타운",
+    "note": "",
+    "category": "normal",
+    "tong_key": "20통",
+    "extra_tokens": [
+      "성원",
+      "포레스트타운"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 24,
+    "school_name": "검산초",
+    "admin_area": "금촌3동",
+    "tong_ri": "21통",
+    "extra_area": "유승아파트",
+    "note": "",
+    "category": "normal",
+    "tong_key": "21통",
+    "extra_tokens": [
+      "유승아파트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 25,
+    "school_name": "검산초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 26,
+    "school_name": "검산초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 27,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "1통",
+    "extra_area": "교하동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통",
+    "extra_tokens": [
+      "교하동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 28,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "2통",
+    "extra_area": "당하동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": [
+      "당하동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 29,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "11통",
+    "extra_area": "연다산동",
+    "note": "청석초",
+    "category": "normal",
+    "tong_key": "11통",
+    "extra_tokens": [
+      "연다산동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 30,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "13통",
+    "extra_area": "오도동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "오도동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 31,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "14통",
+    "extra_area": "오도동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": [
+      "오도동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 32,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "15통",
+    "extra_area": "하지석동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": [
+      "하지석동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 33,
+    "school_name": "교하초",
+    "admin_area": "교하동",
+    "tong_ri": "16통",
+    "extra_area": "교하동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": [
+      "교하동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 34,
+    "school_name": "교하초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 35,
+    "school_name": "교하초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 36,
+    "school_name": "군내초",
+    "admin_area": "군내면",
+    "tong_ri": "백연리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "백연리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 37,
+    "school_name": "군내초",
+    "admin_area": "진동면",
+    "tong_ri": "동파리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "동파리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 38,
+    "school_name": "군내초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 39,
+    "school_name": "군내초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 40,
+    "school_name": "금릉초",
+    "admin_area": "금촌2동",
+    "tong_ri": "4통",
+    "extra_area": "대영장미(1단지, 3단지)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "4통",
+    "extra_tokens": [
+      "대영장미",
+      "1단지",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 41,
+    "school_name": "금릉초",
+    "admin_area": "금촌2동",
+    "tong_ri": "6통",
+    "extra_area": "두보, 건일장미 7차",
+    "note": "",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "두보",
+      "건일장미",
+      "7차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 42,
+    "school_name": "금릉초",
+    "admin_area": "금촌2동",
+    "tong_ri": "13~16통",
+    "extra_area": "후곡마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13~16통",
+    "extra_tokens": [
+      "후곡마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 43,
+    "school_name": "금릉초",
+    "admin_area": "금촌2동",
+    "tong_ri": "20통",
+    "extra_area": "후곡마을 6단지",
+    "note": "새금초",
+    "category": "normal",
+    "tong_key": "20통",
+    "extra_tokens": [
+      "후곡마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 44,
+    "school_name": "금릉초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 45,
+    "school_name": "금릉초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 46,
+    "school_name": "금신초",
+    "admin_area": "금촌1동",
+    "tong_ri": "1통,3통,4통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통,3통,4통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 47,
+    "school_name": "금신초",
+    "admin_area": "금촌1동",
+    "tong_ri": "5통",
+    "extra_area": "신안실크밸리 1차",
+    "note": "금촌초\n파주송화초",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "신안실크밸리",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 48,
+    "school_name": "금신초",
+    "admin_area": "금촌1동",
+    "tong_ri": "6통",
+    "extra_area": "신안실크밸리 2차",
+    "note": "금촌초\n파주송화초",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "신안실크밸리",
+      "2차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 49,
+    "school_name": "금신초",
+    "admin_area": "금촌3동",
+    "tong_ri": "1통,2통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통,2통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 50,
+    "school_name": "금신초",
+    "admin_area": "금촌3동",
+    "tong_ri": "7통,8통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통,8통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 51,
+    "school_name": "금신초",
+    "admin_area": "금촌3동",
+    "tong_ri": "15통,16통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통,16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 52,
+    "school_name": "금신초",
+    "admin_area": "금촌3동",
+    "tong_ri": "17통",
+    "extra_area": "대방노블랜드",
+    "note": "",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": [
+      "대방노블랜드"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 53,
+    "school_name": "금신초",
+    "admin_area": "금촌3동",
+    "tong_ri": "18통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 54,
+    "school_name": "금신초",
+    "admin_area": "금촌3동",
+    "tong_ri": "19통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "19통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 55,
+    "school_name": "금신초",
+    "admin_area": "월롱면",
+    "tong_ri": "영태3리,4리,\n6리",
+    "extra_area": "",
+    "note": "파주송화초",
+    "category": "normal",
+    "tong_key": "영태3리,4리,6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 56,
+    "school_name": "금신초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 57,
+    "school_name": "금신초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 58,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "2통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 59,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "5통",
+    "extra_area": "신안실크밸리 1차",
+    "note": "금신초\n파주송화초",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "신안실크밸리",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 60,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "6통",
+    "extra_area": "신안실크밸리 2차",
+    "note": "금신초\n파주송화초",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "신안실크밸리",
+      "2차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 61,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "7통",
+    "extra_area": "1~10반, 17반",
+    "note": "금향초",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "10반",
+      "17반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 62,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "9통",
+    "extra_area": "1~3반, 6~13반, 15~19반, 21~23반",
+    "note": "금향초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": [
+      "3반",
+      "13반",
+      "15",
+      "19반",
+      "21",
+      "23반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 63,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "10통",
+    "extra_area": "",
+    "note": "금향초",
+    "category": "normal",
+    "tong_key": "10통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 64,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "11~15통,\n17~18통",
+    "extra_area": "금향초와 공동통학구역 제외",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11~15통,17~18통",
+    "extra_tokens": [
+      "금향초와",
+      "공동통학구역",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 65,
+    "school_name": "금촌초",
+    "admin_area": "금촌1동",
+    "tong_ri": "18통 2~3반",
+    "extra_area": "",
+    "note": "금향초",
+    "category": "normal",
+    "tong_key": "18통2~3반",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 66,
+    "school_name": "금촌초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 67,
+    "school_name": "금촌초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 68,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "7통",
+    "extra_area": "1~10반, 17반",
+    "note": "금촌초",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "10반",
+      "17반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 69,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "7통",
+    "extra_area": "11~16반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "11",
+      "16반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 70,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "8통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 71,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "9통",
+    "extra_area": "1~3반, 6~13반, 15~19반, 21~23반",
+    "note": "금촌초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": [
+      "3반",
+      "13반",
+      "15",
+      "19반",
+      "21",
+      "23반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 72,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "9통",
+    "extra_area": "4~5반, 14반, 20반, 24반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": [
+      "5반",
+      "14반",
+      "20반",
+      "24반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 73,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "10통",
+    "extra_area": "",
+    "note": "금촌초",
+    "category": "normal",
+    "tong_key": "10통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 74,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "16통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 75,
+    "school_name": "금향초",
+    "admin_area": "금촌1동",
+    "tong_ri": "18통 2~3반",
+    "extra_area": "",
+    "note": "금촌초",
+    "category": "normal",
+    "tong_key": "18통2~3반",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 76,
+    "school_name": "금향초",
+    "admin_area": "금촌2동",
+    "tong_ri": "1통 9~13반",
+    "extra_area": "쇠재마을 1단지(106~108동)",
+    "note": "새금초",
+    "category": "normal",
+    "tong_key": "1통9~13반",
+    "extra_tokens": [
+      "쇠재마을",
+      "1단지",
+      "106",
+      "108동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 77,
+    "school_name": "금향초",
+    "admin_area": "금촌2동",
+    "tong_ri": "2통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 78,
+    "school_name": "금향초",
+    "admin_area": "금촌2동",
+    "tong_ri": "17통",
+    "extra_area": "쇠재마을 5단지(505~509동)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": [
+      "쇠재마을",
+      "5단지",
+      "505",
+      "509동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 79,
+    "school_name": "금향초",
+    "admin_area": "금촌2동",
+    "tong_ri": "18통",
+    "extra_area": "쇠재마을 5단지(501~504동)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": [
+      "쇠재마을",
+      "5단지",
+      "501",
+      "504동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 80,
+    "school_name": "금향초",
+    "admin_area": "금촌2동",
+    "tong_ri": "19통",
+    "extra_area": "쇠재마을 5단지(510~516동)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "19통",
+    "extra_tokens": [
+      "쇠재마을",
+      "5단지",
+      "510",
+      "516동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 81,
+    "school_name": "금향초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 82,
+    "school_name": "금향초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 83,
+    "school_name": "금화초",
+    "admin_area": "금촌2동",
+    "tong_ri": "5통",
+    "extra_area": "대영장미 2단지, 6단지\n건일장미 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "대영장미",
+      "2단지",
+      "6단지",
+      "건일장미",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 84,
+    "school_name": "금화초",
+    "admin_area": "금촌2동",
+    "tong_ri": "7통",
+    "extra_area": "주공아파트 1단지 101동~104동",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "주공아파트",
+      "1단지",
+      "101동",
+      "104동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 85,
+    "school_name": "금화초",
+    "admin_area": "금촌2동",
+    "tong_ri": "8~10통",
+    "extra_area": "새꽃마을 1단지 일부",
+    "note": "",
+    "category": "normal",
+    "tong_key": "8~10통",
+    "extra_tokens": [
+      "새꽃마을",
+      "1단지",
+      "일부"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 86,
+    "school_name": "금화초",
+    "admin_area": "금촌2동",
+    "tong_ri": "11~12통",
+    "extra_area": "새꽃마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11~12통",
+    "extra_tokens": [
+      "새꽃마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 87,
+    "school_name": "금화초",
+    "admin_area": "금촌2동",
+    "tong_ri": "23통",
+    "extra_area": "주공아파트 1단지 105동~108동, 5반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "23통",
+    "extra_tokens": [
+      "주공아파트",
+      "1단지",
+      "105동",
+      "108동",
+      "5반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 88,
+    "school_name": "금화초",
+    "admin_area": "금촌2동",
+    "tong_ri": "24통",
+    "extra_area": "새꽃마을 1단지 일부",
+    "note": "",
+    "category": "normal",
+    "tong_key": "24통",
+    "extra_tokens": [
+      "새꽃마을",
+      "1단지",
+      "일부"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 89,
+    "school_name": "금화초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 90,
+    "school_name": "금화초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 91,
+    "school_name": "능안초",
+    "admin_area": "조리읍",
+    "tong_ri": "능안1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "능안1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 92,
+    "school_name": "능안초",
+    "admin_area": "조리읍",
+    "tong_ri": "대원1리, 7리",
+    "extra_area": "",
+    "note": "파주대원초",
+    "category": "normal",
+    "tong_key": "대원1리,7리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 93,
+    "school_name": "능안초",
+    "admin_area": "조리읍",
+    "tong_ri": "대원4리",
+    "extra_area": "한라아파트",
+    "note": "",
+    "category": "normal",
+    "tong_key": "대원4리",
+    "extra_tokens": [
+      "한라아파트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 94,
+    "school_name": "능안초",
+    "admin_area": "고양시 고봉동",
+    "tong_ri": "5통",
+    "extra_area": "",
+    "note": "성석초(고양시)\n파주대원초",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 95,
+    "school_name": "능안초",
+    "admin_area": "운정4동",
+    "tong_ri": "1~6통, 19통",
+    "extra_area": "상지석동 일원",
+    "note": "지산초",
+    "category": "normal",
+    "tong_key": "1~6통,19통",
+    "extra_tokens": [
+      "상지석동",
+      "일원"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 96,
+    "school_name": "능안초",
+    "admin_area": "제한적 공동통학구역",
+    "tong_ri": "-",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "-",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 97,
+    "school_name": "능안초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 98,
+    "school_name": "능안초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 99,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "20통",
+    "extra_area": "해오름마을 12단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "20통",
+    "extra_tokens": [
+      "해오름마을",
+      "12단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 100,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "21통",
+    "extra_area": "해오름마을 11단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "21통",
+    "extra_tokens": [
+      "해오름마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 101,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "22통",
+    "extra_area": "해오름마을 10단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "22통",
+    "extra_tokens": [
+      "해오름마을",
+      "10단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 102,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "23통",
+    "extra_area": "해오름마을 14단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "23통",
+    "extra_tokens": [
+      "해오름마을",
+      "14단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 103,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "25통",
+    "extra_area": "해오름마을 3단지(A10블록)",
+    "note": "운정해오름초",
+    "category": "normal",
+    "tong_key": "25통",
+    "extra_tokens": [
+      "해오름마을",
+      "3단지",
+      "A10블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 104,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "28통",
+    "extra_area": "해오름마을 1단지(A11블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "28통",
+    "extra_tokens": [
+      "해오름마을",
+      "1단지",
+      "A11블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 105,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "31통",
+    "extra_area": "해오름마을 9단지(A39블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "31통",
+    "extra_tokens": [
+      "해오름마을",
+      "9단지",
+      "A39블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 106,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "32통",
+    "extra_area": "해오름마을 2단지(A38블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "32통",
+    "extra_tokens": [
+      "해오름마을",
+      "2단지",
+      "A38블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 107,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "27통",
+    "extra_area": "해오름마을 5단지(A9블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "27통",
+    "extra_tokens": [
+      "해오름마을",
+      "5단지",
+      "A9블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 108,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "26통",
+    "extra_area": "해오름마을 13단지(A17블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "26통",
+    "extra_tokens": [
+      "해오름마을",
+      "13단지",
+      "A17블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 109,
+    "school_name": "다율초",
+    "admin_area": "운정5동",
+    "tong_ri": "미정",
+    "extra_area": "C18, D1블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "C18",
+      "D1블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 110,
+    "school_name": "다율초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 111,
+    "school_name": "다율초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 113,
+    "school_name": "대성동초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 114,
+    "school_name": "덕암초",
+    "admin_area": "조리읍",
+    "tong_ri": "오산1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "오산1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 115,
+    "school_name": "덕암초",
+    "admin_area": "조리읍",
+    "tong_ri": "뇌조1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "뇌조1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 116,
+    "school_name": "덕암초",
+    "admin_area": "조리읍",
+    "tong_ri": "등원1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "등원1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 117,
+    "school_name": "덕암초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 118,
+    "school_name": "덕암초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 119,
+    "school_name": "도마산초",
+    "admin_area": "광탄면",
+    "tong_ri": "방축1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "방축1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 120,
+    "school_name": "도마산초",
+    "admin_area": "광탄면",
+    "tong_ri": "창만4~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "창만4~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 121,
+    "school_name": "도마산초",
+    "admin_area": "광탄면",
+    "tong_ri": "발랑1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "발랑1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 122,
+    "school_name": "도마산초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 123,
+    "school_name": "도마산초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 124,
+    "school_name": "동패초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C5블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C5블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 125,
+    "school_name": "동패초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C18블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C18블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 126,
+    "school_name": "동패초",
+    "admin_area": "운정3동",
+    "tong_ri": "5통",
+    "extra_area": "C9, C10, D1블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "C9",
+      "C10",
+      "D1블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 127,
+    "school_name": "동패초",
+    "admin_area": "운정3동",
+    "tong_ri": "6~7통",
+    "extra_area": "한울마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "6~7통",
+    "extra_tokens": [
+      "한울마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 128,
+    "school_name": "동패초",
+    "admin_area": "운정3동",
+    "tong_ri": "32~34통",
+    "extra_area": "한울마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "32~34통",
+    "extra_tokens": [
+      "한울마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 129,
+    "school_name": "동패초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 130,
+    "school_name": "동패초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 131,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "4통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "4통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 132,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "11통",
+    "extra_area": "책향기마을 14단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11통",
+    "extra_tokens": [
+      "책향기마을",
+      "14단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 133,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "12통",
+    "extra_area": "책향기마을 15단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "12통",
+    "extra_tokens": [
+      "책향기마을",
+      "15단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 134,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "17통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 135,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "18통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 136,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "34통",
+    "extra_area": "초롱꽃마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "34통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 137,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "33통",
+    "extra_area": "초롱꽃마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "33통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 138,
+    "school_name": "두일초",
+    "admin_area": "운정5동",
+    "tong_ri": "미정",
+    "extra_area": "C9, C10블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "C9",
+      "C10블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 139,
+    "school_name": "두일초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 140,
+    "school_name": "두일초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 141,
+    "school_name": "마정초",
+    "admin_area": "문산읍",
+    "tong_ri": "사목2~3리",
+    "extra_area": "",
+    "note": "문산초",
+    "category": "normal",
+    "tong_key": "사목2~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 142,
+    "school_name": "마정초",
+    "admin_area": "문산읍",
+    "tong_ri": "운천1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "운천1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 143,
+    "school_name": "마정초",
+    "admin_area": "문산읍",
+    "tong_ri": "마정1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "마정1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 144,
+    "school_name": "마정초",
+    "admin_area": "문산읍",
+    "tong_ri": "장산1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "장산1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 145,
+    "school_name": "마정초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 146,
+    "school_name": "마정초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 147,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "마지1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "마지1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 148,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "마지3리",
+    "extra_area": "군인관사",
+    "note": "",
+    "category": "normal",
+    "tong_key": "마지3리",
+    "extra_tokens": [
+      "군인관사"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 149,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "구읍1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "구읍1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 150,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "객현1~2리",
+    "extra_area": "",
+    "note": "적암초",
+    "category": "normal",
+    "tong_key": "객현1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 151,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "율포리",
+    "extra_area": "",
+    "note": "적암초",
+    "category": "normal",
+    "tong_key": "율포리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 152,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "장현2리",
+    "extra_area": "",
+    "note": "적암초",
+    "category": "normal",
+    "tong_key": "장현2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 153,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "주월리,가월리\n설마리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "주월리,가월리설마리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 154,
+    "school_name": "마지초",
+    "admin_area": "적성면",
+    "tong_ri": "무건리",
+    "extra_area": "",
+    "note": "남면초(양주시)",
+    "category": "normal",
+    "tong_key": "무건리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 155,
+    "school_name": "마지초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 156,
+    "school_name": "마지초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 157,
+    "school_name": "문발초",
+    "admin_area": "교하동",
+    "tong_ri": "8통",
+    "extra_area": "문발 헤르만하우스",
+    "note": "심학초",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": [
+      "문발",
+      "헤르만하우스"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 158,
+    "school_name": "문발초",
+    "admin_area": "교하동",
+    "tong_ri": "9통",
+    "extra_area": "",
+    "note": "청석초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 159,
+    "school_name": "문발초",
+    "admin_area": "교하동",
+    "tong_ri": "10통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "10통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 160,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "5통",
+    "extra_area": "숲속길마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "숲속길마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 161,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "13통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 162,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "14통",
+    "extra_area": "노을빛마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": [
+      "노을빛마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 163,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "15통",
+    "extra_area": "노을빛마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": [
+      "노을빛마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 164,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "16통",
+    "extra_area": "숲속길마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": [
+      "숲속길마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 165,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "19통",
+    "extra_area": "월드메르디앙 타운하우스",
+    "note": "",
+    "category": "normal",
+    "tong_key": "19통",
+    "extra_tokens": [
+      "월드메르디앙",
+      "타운하우스"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 166,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "24통",
+    "extra_area": "노을빛마을 16단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "24통",
+    "extra_tokens": [
+      "노을빛마을",
+      "16단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 167,
+    "school_name": "문발초",
+    "admin_area": "운정5동",
+    "tong_ri": "미정",
+    "extra_area": "C12, 13블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "C12",
+      "13블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 168,
+    "school_name": "문발초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 169,
+    "school_name": "문발초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 170,
+    "school_name": "문산동초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유3리",
+    "extra_area": "1반, 11~20반(두산위브)\n28~32반(진흥소슬마을)",
+    "note": "임진초",
+    "category": "normal",
+    "tong_key": "선유3리",
+    "extra_tokens": [
+      "1반",
+      "11",
+      "20반",
+      "두산위브",
+      "28",
+      "32반",
+      "진흥소슬마을"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 171,
+    "school_name": "문산동초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유3리",
+    "extra_area": "2~10반\n21~27반(양우내안애)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유3리",
+    "extra_tokens": [
+      "10반",
+      "21",
+      "27반",
+      "양우내안애"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 172,
+    "school_name": "문산동초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유3리",
+    "extra_area": "5반(문산역 동문굿모닝힐)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유3리",
+    "extra_tokens": [
+      "5반",
+      "문산역",
+      "동문굿모닝힐"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 173,
+    "school_name": "문산동초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유4~5리",
+    "extra_area": "",
+    "note": "파양초",
+    "category": "normal",
+    "tong_key": "선유4~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 174,
+    "school_name": "문산동초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유7리",
+    "extra_area": "문산선유 주공2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유7리",
+    "extra_tokens": [
+      "문산선유",
+      "주공2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 175,
+    "school_name": "문산동초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유8리",
+    "extra_area": "문산선유 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유8리",
+    "extra_tokens": [
+      "문산선유",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 176,
+    "school_name": "문산동초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 177,
+    "school_name": "문산동초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 178,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산1리",
+    "extra_area": "5반~24반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산1리",
+    "extra_tokens": [
+      "5반",
+      "24반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 179,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산2~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산2~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 180,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산7리",
+    "extra_area": "문산신원아침도시아파트",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산7리",
+    "extra_tokens": [
+      "문산신원아침도시아파트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 181,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동1리",
+    "extra_area": "세성아파트, 효형아파트, \n파주힐스테이트2차 등",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동1리",
+    "extra_tokens": [
+      "세성아파트",
+      "효형아파트",
+      "파주힐스테이트2차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 182,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동3리",
+    "extra_area": "2반, 37~40반(문산당동주공아파트 4단지)",
+    "note": "자유초",
+    "category": "normal",
+    "tong_key": "당동3리",
+    "extra_tokens": [
+      "2반",
+      "37",
+      "40반",
+      "문산당동주공아파트",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 183,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동3리",
+    "extra_area": "9~11반(세아 산호아파트)\n26~36반(자연&꿈에그린)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동3리",
+    "extra_tokens": [
+      "11반",
+      "세아",
+      "산호아파트",
+      "26",
+      "36반",
+      "자연",
+      "꿈에그린"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 184,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동4리",
+    "extra_area": "당동주공아파트 1·2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동4리",
+    "extra_tokens": [
+      "당동주공아파트",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 185,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동6리",
+    "extra_area": "한양수자인",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동6리",
+    "extra_tokens": [
+      "한양수자인"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 186,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "사목1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "사목1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 187,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "사목2~3리",
+    "extra_area": "",
+    "note": "마정초",
+    "category": "normal",
+    "tong_key": "사목2~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 188,
+    "school_name": "문산초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유1리",
+    "extra_area": "봉미로 기준 서향",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유1리",
+    "extra_tokens": [
+      "봉미로",
+      "기준",
+      "서향"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 189,
+    "school_name": "문산초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 190,
+    "school_name": "문산초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 191,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "A21BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "A21BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 192,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "A22BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "A22BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 193,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "18통",
+    "extra_area": "물향기마을 10단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": [
+      "물향기마을",
+      "10단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 194,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "15통",
+    "extra_area": "물향기마을 11단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": [
+      "물향기마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 195,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "주상복합4BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "주상복합4BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 196,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "주상복합5BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "주상복합5BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 197,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "주상복합6BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "주상복합6BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 198,
+    "school_name": "물향기초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "C4",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "C4"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 199,
+    "school_name": "물향기초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 200,
+    "school_name": "물향기초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 201,
+    "school_name": "별하람초",
+    "admin_area": "운정1동",
+    "tong_ri": "20통",
+    "extra_area": "별하람마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "20통",
+    "extra_tokens": [
+      "별하람마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 202,
+    "school_name": "별하람초",
+    "admin_area": "운정1동",
+    "tong_ri": "미정",
+    "extra_area": "별하람마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "별하람마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 203,
+    "school_name": "별하람초",
+    "admin_area": "운정1동",
+    "tong_ri": "17통",
+    "extra_area": "별하람마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": [
+      "별하람마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 204,
+    "school_name": "별하람초",
+    "admin_area": "운정1동",
+    "tong_ri": "18통",
+    "extra_area": "별하람마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": [
+      "별하람마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 205,
+    "school_name": "별하람초",
+    "admin_area": "운정1동",
+    "tong_ri": "21통",
+    "extra_area": "별하람마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "21통",
+    "extra_tokens": [
+      "별하람마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 206,
+    "school_name": "별하람초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 207,
+    "school_name": "별하람초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 208,
+    "school_name": "봉일천초",
+    "admin_area": "조리읍",
+    "tong_ri": "봉일천1~9리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "봉일천1~9리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 209,
+    "school_name": "봉일천초",
+    "admin_area": "조리읍",
+    "tong_ri": "봉일천10리",
+    "extra_area": "송촌토파즈",
+    "note": "파주대원초",
+    "category": "normal",
+    "tong_key": "봉일천10리",
+    "extra_tokens": [
+      "송촌토파즈"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 210,
+    "school_name": "봉일천초",
+    "admin_area": "조리읍",
+    "tong_ri": "봉일천11리",
+    "extra_area": "효성해링턴플레이스",
+    "note": "",
+    "category": "normal",
+    "tong_key": "봉일천11리",
+    "extra_tokens": [
+      "효성해링턴플레이스"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 211,
+    "school_name": "봉일천초",
+    "admin_area": "조리읍",
+    "tong_ri": "장곡1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "장곡1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 212,
+    "school_name": "봉일천초",
+    "admin_area": "조리읍",
+    "tong_ri": "등원2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "등원2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 213,
+    "school_name": "봉일천초",
+    "admin_area": "조리읍",
+    "tong_ri": "뇌조3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "뇌조3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 214,
+    "school_name": "봉일천초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 215,
+    "school_name": "봉일천초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 216,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 1~17반",
+    "extra_area": "산내마을 11단지",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "11통1~17반",
+    "extra_tokens": [
+      "산내마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 217,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C4블록",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C4블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 218,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C15블록",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C15블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 219,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C16블록",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C16블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 220,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C17블록",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C17블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 221,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "D6블록",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "D6블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 222,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "20~22통",
+    "extra_area": "산내마을 9단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "20~22통",
+    "extra_tokens": [
+      "산내마을",
+      "9단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 223,
+    "school_name": "산내초",
+    "admin_area": "운정2동",
+    "tong_ri": "23~24통",
+    "extra_area": "산내마을 10단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "23~24통",
+    "extra_tokens": [
+      "산내마을",
+      "10단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 224,
+    "school_name": "산내초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 225,
+    "school_name": "산내초",
+    "admin_area": "함계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 226,
+    "school_name": "산들초",
+    "admin_area": "운정2동",
+    "tong_ri": "14통",
+    "extra_area": "산내마을 6단지",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": [
+      "산내마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 227,
+    "school_name": "산들초",
+    "admin_area": "운정2동",
+    "tong_ri": "15통",
+    "extra_area": "산내마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": [
+      "산내마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 228,
+    "school_name": "산들초",
+    "admin_area": "운정2동",
+    "tong_ri": "18통",
+    "extra_area": "산내마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": [
+      "산내마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 229,
+    "school_name": "산들초",
+    "admin_area": "운정2동",
+    "tong_ri": "19통",
+    "extra_area": "산내마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "19통",
+    "extra_tokens": [
+      "산내마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 230,
+    "school_name": "산들초",
+    "admin_area": "운정2동",
+    "tong_ri": "28통 1~6반",
+    "extra_area": "산내마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "28통1~6반",
+    "extra_tokens": [
+      "산내마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 231,
+    "school_name": "산들초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 232,
+    "school_name": "산들초",
+    "admin_area": "함계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 233,
+    "school_name": "삼성초",
+    "admin_area": "탄현면",
+    "tong_ri": "축현1리",
+    "extra_area": "2반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "축현1리",
+    "extra_tokens": [
+      "2반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 234,
+    "school_name": "삼성초",
+    "admin_area": "탄현면",
+    "tong_ri": "오금2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "오금2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 235,
+    "school_name": "삼성초",
+    "admin_area": "탄현면",
+    "tong_ri": "낙하리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "낙하리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 236,
+    "school_name": "삼성초",
+    "admin_area": "탄현면",
+    "tong_ri": "금승리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "금승리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 237,
+    "school_name": "삼성초",
+    "admin_area": "탄현면",
+    "tong_ri": "문지리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문지리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 238,
+    "school_name": "삼성초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 239,
+    "school_name": "삼성초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 240,
+    "school_name": "새금초",
+    "admin_area": "금촌2동",
+    "tong_ri": "1통 9~13반",
+    "extra_area": "쇠재마을 1단지(106~108동)",
+    "note": "금향초",
+    "category": "normal",
+    "tong_key": "1통9~13반",
+    "extra_tokens": [
+      "쇠재마을",
+      "1단지",
+      "106",
+      "108동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 241,
+    "school_name": "새금초",
+    "admin_area": "금촌2동",
+    "tong_ri": "1통 1~8반, 14반",
+    "extra_area": "쇠재마을 1단지(101~105동, 109동)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통1~8반,14반",
+    "extra_tokens": [
+      "쇠재마을",
+      "1단지",
+      "101",
+      "105동",
+      "109동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 242,
+    "school_name": "새금초",
+    "admin_area": "금촌2동",
+    "tong_ri": "3통",
+    "extra_area": "후곡마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3통",
+    "extra_tokens": [
+      "후곡마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 243,
+    "school_name": "새금초",
+    "admin_area": "금촌2동",
+    "tong_ri": "20통",
+    "extra_area": "후곡마을 6단지",
+    "note": "금릉초",
+    "category": "normal",
+    "tong_key": "20통",
+    "extra_tokens": [
+      "후곡마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 244,
+    "school_name": "새금초",
+    "admin_area": "금촌2동",
+    "tong_ri": "21통",
+    "extra_area": "서원마을 7단지(701~706동)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "21통",
+    "extra_tokens": [
+      "서원마을",
+      "7단지",
+      "701",
+      "706동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 245,
+    "school_name": "새금초",
+    "admin_area": "금촌2동",
+    "tong_ri": "22통",
+    "extra_area": "서원마을 7단지(707~712동)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "22통",
+    "extra_tokens": [
+      "서원마을",
+      "7단지",
+      "707",
+      "712동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 246,
+    "school_name": "새금초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 247,
+    "school_name": "새금초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 248,
+    "school_name": "석곶초",
+    "admin_area": "운정5동",
+    "tong_ri": "6통",
+    "extra_area": "숲속길마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "숲속길마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 249,
+    "school_name": "석곶초",
+    "admin_area": "운정5동",
+    "tong_ri": "7통",
+    "extra_area": "책향기마을 10단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "책향기마을",
+      "10단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 250,
+    "school_name": "석곶초",
+    "admin_area": "운정5동",
+    "tong_ri": "8통",
+    "extra_area": "책향기마을 11단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": [
+      "책향기마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 251,
+    "school_name": "석곶초",
+    "admin_area": "운정5동",
+    "tong_ri": "9통",
+    "extra_area": "책향기마을 12단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": [
+      "책향기마을",
+      "12단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 252,
+    "school_name": "석곶초",
+    "admin_area": "운정5동",
+    "tong_ri": "10통",
+    "extra_area": "책향기마을 13단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "10통",
+    "extra_tokens": [
+      "책향기마을",
+      "13단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 253,
+    "school_name": "석곶초",
+    "admin_area": "운정5동",
+    "tong_ri": "-",
+    "extra_area": "C3블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "-",
+    "extra_tokens": [
+      "C3블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 254,
+    "school_name": "석곶초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 255,
+    "school_name": "석곶초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 256,
+    "school_name": "숲노을초",
+    "admin_area": "운정6동",
+    "tong_ri": "1통",
+    "extra_area": "초롱꽃마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 257,
+    "school_name": "숲노을초",
+    "admin_area": "운정6동",
+    "tong_ri": "2통",
+    "extra_area": "초롱꽃마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 258,
+    "school_name": "숲노을초",
+    "admin_area": "운정6동",
+    "tong_ri": "3통",
+    "extra_area": "초롱꽃마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 259,
+    "school_name": "숲노을초",
+    "admin_area": "운정6동",
+    "tong_ri": "10통",
+    "extra_area": "초롱꽃마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "10통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 260,
+    "school_name": "숲노을초",
+    "admin_area": "운정6동",
+    "tong_ri": "11통",
+    "extra_area": "초롱꽃마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 261,
+    "school_name": "숲노을초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "C6~8 블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "C6",
+      "블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 262,
+    "school_name": "숲노을초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 263,
+    "school_name": "숲노을초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 264,
+    "school_name": "신산초",
+    "admin_area": "광탄면",
+    "tong_ri": "분수1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "분수1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 265,
+    "school_name": "신산초",
+    "admin_area": "광탄면",
+    "tong_ri": "신산1~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "신산1~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 266,
+    "school_name": "신산초",
+    "admin_area": "광탄면",
+    "tong_ri": "창만1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "창만1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 267,
+    "school_name": "신산초",
+    "admin_area": "광탄면",
+    "tong_ri": "마장1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "마장1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 268,
+    "school_name": "신산초",
+    "admin_area": "광탄면",
+    "tong_ri": "영장1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "영장1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 269,
+    "school_name": "신산초",
+    "admin_area": "광탄면",
+    "tong_ri": "기산1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "기산1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 270,
+    "school_name": "신산초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 271,
+    "school_name": "신산초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 272,
+    "school_name": "심학초",
+    "admin_area": "교하동",
+    "tong_ri": "4~5통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "4~5통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 273,
+    "school_name": "심학초",
+    "admin_area": "교하동",
+    "tong_ri": "6통, 17통",
+    "extra_area": "산남동 일원",
+    "note": "",
+    "category": "normal",
+    "tong_key": "6통,17통",
+    "extra_tokens": [
+      "산남동",
+      "일원"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 274,
+    "school_name": "심학초",
+    "admin_area": "교하동",
+    "tong_ri": "7통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 275,
+    "school_name": "심학초",
+    "admin_area": "교하동",
+    "tong_ri": "8통",
+    "extra_area": "문발 헤르만하우스",
+    "note": "문발초",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": [
+      "문발",
+      "헤르만하우스"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 276,
+    "school_name": "심학초",
+    "admin_area": "운정3동",
+    "tong_ri": "1통, 4통, 35통",
+    "extra_area": "",
+    "note": "운광초",
+    "category": "normal",
+    "tong_key": "1통,4통,35통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 277,
+    "school_name": "심학초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 278,
+    "school_name": "심학초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 279,
+    "school_name": "연풍초",
+    "admin_area": "파주읍",
+    "tong_ri": "연풍1~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "연풍1~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 280,
+    "school_name": "연풍초",
+    "admin_area": "파주읍",
+    "tong_ri": "연풍6리",
+    "extra_area": "연풍양우내안애에코하임",
+    "note": "",
+    "category": "normal",
+    "tong_key": "연풍6리",
+    "extra_tokens": [
+      "연풍양우내안애에코하임"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 281,
+    "school_name": "연풍초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 282,
+    "school_name": "연풍초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 283,
+    "school_name": "영도초",
+    "admin_area": "월롱면",
+    "tong_ri": "도내1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "도내1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 284,
+    "school_name": "영도초",
+    "admin_area": "월롱면",
+    "tong_ri": "위전3~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "위전3~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 285,
+    "school_name": "영도초",
+    "admin_area": "월롱면",
+    "tong_ri": "영태1~2리,5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "영태1~2리,5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 286,
+    "school_name": "영도초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 287,
+    "school_name": "영도초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 288,
+    "school_name": "와석초",
+    "admin_area": "운정3동",
+    "tong_ri": "18~19통",
+    "extra_area": "한빛마을 3단지",
+    "note": "한빛초",
+    "category": "normal",
+    "tong_key": "18~19통",
+    "extra_tokens": [
+      "한빛마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 289,
+    "school_name": "와석초",
+    "admin_area": "운정3동",
+    "tong_ri": "29통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "29통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 290,
+    "school_name": "와석초",
+    "admin_area": "운정3동",
+    "tong_ri": "30통",
+    "extra_area": "한빛마을 9단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "30통",
+    "extra_tokens": [
+      "한빛마을",
+      "9단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 291,
+    "school_name": "와석초",
+    "admin_area": "운정3동",
+    "tong_ri": "31통",
+    "extra_area": "한빛마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "31통",
+    "extra_tokens": [
+      "한빛마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 292,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "8통",
+    "extra_area": "",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 293,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "9통",
+    "extra_area": "",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 294,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 제외",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 295,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 1차",
+    "note": "운정초, 지산초, \n파주와동초, \n호곡초(고양시)",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 296,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "15통",
+    "extra_area": "",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 297,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "16통",
+    "extra_area": "",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 298,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "17통",
+    "extra_area": "",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 299,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "18통",
+    "extra_area": "",
+    "note": "운정초, 지산초, \n파주와동초",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 300,
+    "school_name": "와석초",
+    "admin_area": "운정4동",
+    "tong_ri": "10~12통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "10~12통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 301,
+    "school_name": "와석초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 302,
+    "school_name": "와석초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 303,
+    "school_name": "용미초",
+    "admin_area": "광탄면",
+    "tong_ri": "용미1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "용미1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 304,
+    "school_name": "용미초",
+    "admin_area": "광탄면",
+    "tong_ri": "분수2~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "분수2~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 305,
+    "school_name": "용미초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 306,
+    "school_name": "용미초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 307,
+    "school_name": "용연초",
+    "admin_area": "파평면",
+    "tong_ri": "눌노리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "눌노리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 308,
+    "school_name": "용연초",
+    "admin_area": "파평면",
+    "tong_ri": "덕천리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "덕천리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 309,
+    "school_name": "용연초",
+    "admin_area": "파평면",
+    "tong_ri": "금파1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "금파1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 310,
+    "school_name": "용연초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 311,
+    "school_name": "용연초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 312,
+    "school_name": "운광초",
+    "admin_area": "운정3동",
+    "tong_ri": "1통, 4통, 35통",
+    "extra_area": "",
+    "note": "심학초",
+    "category": "normal",
+    "tong_key": "1통,4통,35통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 313,
+    "school_name": "운광초",
+    "admin_area": "운정3동",
+    "tong_ri": "8통",
+    "extra_area": "한울마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": [
+      "한울마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 314,
+    "school_name": "운광초",
+    "admin_area": "운정3동",
+    "tong_ri": "9~10통",
+    "extra_area": "한울마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9~10통",
+    "extra_tokens": [
+      "한울마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 315,
+    "school_name": "운광초",
+    "admin_area": "운정3동",
+    "tong_ri": "11~12통",
+    "extra_area": "한울마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11~12통",
+    "extra_tokens": [
+      "한울마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 316,
+    "school_name": "운광초",
+    "admin_area": "운정3동",
+    "tong_ri": "13통",
+    "extra_area": "한울마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "한울마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 317,
+    "school_name": "운광초",
+    "admin_area": "운정3동",
+    "tong_ri": "14통",
+    "extra_area": "한울마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": [
+      "한울마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 318,
+    "school_name": "운광초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 319,
+    "school_name": "운광초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 320,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "19통",
+    "extra_area": "물향기마을 9단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "19통",
+    "extra_tokens": [
+      "물향기마을",
+      "9단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 321,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "A20BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "A20BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 322,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "A44BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "A44BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 323,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "A45BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "A45BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 324,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "A46BL",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "A46BL"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 325,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "17통",
+    "extra_area": "물향기마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": [
+      "물향기마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 326,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "주상복합1 블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "주상복합1",
+      "블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 327,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "주상복합2 블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "주상복합2",
+      "블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 328,
+    "school_name": "운정중앙초",
+    "admin_area": "운정6동",
+    "tong_ri": "미정",
+    "extra_area": "주상복합3 블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "주상복합3",
+      "블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 329,
+    "school_name": "운정중앙초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 330,
+    "school_name": "운정중앙초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 331,
+    "school_name": "운정초",
+    "admin_area": "운정3동",
+    "tong_ri": "2통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 332,
+    "school_name": "운정초",
+    "admin_area": "운정3동",
+    "tong_ri": "3통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 333,
+    "school_name": "운정초",
+    "admin_area": "운정3동",
+    "tong_ri": "23~24통",
+    "extra_area": "한빛마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "23~24통",
+    "extra_tokens": [
+      "한빛마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 334,
+    "school_name": "운정초",
+    "admin_area": "운정3동",
+    "tong_ri": "25~26통",
+    "extra_area": "한빛마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "25~26통",
+    "extra_tokens": [
+      "한빛마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 335,
+    "school_name": "운정초",
+    "admin_area": "운정3동",
+    "tong_ri": "27~28통",
+    "extra_area": "한빛마을 8단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "27~28통",
+    "extra_tokens": [
+      "한빛마을",
+      "8단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 336,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "8통",
+    "extra_area": "",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 337,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "9통",
+    "extra_area": "",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 338,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 제외",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 339,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 1차",
+    "note": "와석초, 지산초,\n파주와동초,\n호곡초(고양시)",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 340,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "15통",
+    "extra_area": "",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 341,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "16통",
+    "extra_area": "",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 342,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "17통",
+    "extra_area": "",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 343,
+    "school_name": "운정초",
+    "admin_area": "운정4동",
+    "tong_ri": "18통",
+    "extra_area": "",
+    "note": "와석초, 지산초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 344,
+    "school_name": "운정초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 345,
+    "school_name": "운정초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 346,
+    "school_name": "운정해오름초",
+    "admin_area": "교하동",
+    "tong_ri": "3총",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3총",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 347,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "23통",
+    "extra_area": "해오름마을 14단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "23통",
+    "extra_tokens": [
+      "해오름마을",
+      "14단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 348,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "25통",
+    "extra_area": "해오름마을 3단지",
+    "note": "다율초",
+    "category": "normal",
+    "tong_key": "25통",
+    "extra_tokens": [
+      "해오름마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 349,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "26통",
+    "extra_area": "해오름마을 13단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "26통",
+    "extra_tokens": [
+      "해오름마을",
+      "13단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 350,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "27통",
+    "extra_area": "해오름마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "27통",
+    "extra_tokens": [
+      "해오름마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 351,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "29통",
+    "extra_area": "해오름마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "29통",
+    "extra_tokens": [
+      "해오름마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 352,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "35통",
+    "extra_area": "해오름마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "35통",
+    "extra_tokens": [
+      "해오름마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 353,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "미정",
+    "extra_area": "해오름마을 7단지(A6블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "해오름마을",
+      "7단지",
+      "A6블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 354,
+    "school_name": "운정해오름초",
+    "admin_area": "운정5동",
+    "tong_ri": "",
+    "extra_area": "C2블록, D1~2블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "",
+    "extra_tokens": [
+      "C2블록",
+      "D1",
+      "2블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 355,
+    "school_name": "운정해오름초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 356,
+    "school_name": "운정해오름초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 357,
+    "school_name": "웅담초",
+    "admin_area": "법원읍",
+    "tong_ri": "웅담1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "웅담1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 358,
+    "school_name": "웅담초",
+    "admin_area": "법원읍",
+    "tong_ri": "직천2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "직천2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 359,
+    "school_name": "웅담초",
+    "admin_area": "법원읍",
+    "tong_ri": "금곡1~2리",
+    "extra_area": "",
+    "note": "천현초",
+    "category": "normal",
+    "tong_key": "금곡1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 360,
+    "school_name": "웅담초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 361,
+    "school_name": "웅담초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 362,
+    "school_name": "월롱초",
+    "admin_area": "월롱면",
+    "tong_ri": "능산1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "능산1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 363,
+    "school_name": "월롱초",
+    "admin_area": "월롱면",
+    "tong_ri": "덕은1~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "덕은1~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 364,
+    "school_name": "월롱초",
+    "admin_area": "월롱면",
+    "tong_ri": "위전1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "위전1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 365,
+    "school_name": "월롱초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 366,
+    "school_name": "월롱초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 367,
+    "school_name": "임진초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산1리",
+    "extra_area": "1~4반, 25~35반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산1리",
+    "extra_tokens": [
+      "4반",
+      "25",
+      "35반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 368,
+    "school_name": "임진초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 369,
+    "school_name": "임진초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 370,
+    "school_name": "임진초",
+    "admin_area": "문산읍",
+    "tong_ri": "문산6리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "문산6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 371,
+    "school_name": "임진초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유3리",
+    "extra_area": "1반, 11~20반(두산위브)\n28~32반(진흥소슬마을)",
+    "note": "문산동초",
+    "category": "normal",
+    "tong_key": "선유3리",
+    "extra_tokens": [
+      "1반",
+      "11",
+      "20반",
+      "두산위브",
+      "28",
+      "32반",
+      "진흥소슬마을"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 372,
+    "school_name": "임진초",
+    "admin_area": "문산읍",
+    "tong_ri": "내포1~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "내포1~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 373,
+    "school_name": "임진초",
+    "admin_area": "파주읍",
+    "tong_ri": "봉서1~4리",
+    "extra_area": "3리 1~3반 제외",
+    "note": "",
+    "category": "normal",
+    "tong_key": "봉서1~4리",
+    "extra_tokens": [
+      "3리",
+      "3반",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 374,
+    "school_name": "임진초",
+    "admin_area": "파주읍",
+    "tong_ri": "봉암3~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "봉암3~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 375,
+    "school_name": "임진초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 376,
+    "school_name": "임진초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 377,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유1리",
+    "extra_area": "봉미로 기준 동향",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유1리",
+    "extra_tokens": [
+      "봉미로",
+      "기준",
+      "동향"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 378,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 379,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유9리",
+    "extra_area": "선유리 1420(문산역2차 동문디이스트)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유9리",
+    "extra_tokens": [
+      "선유리",
+      "1420",
+      "문산역2차",
+      "동문디이스트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 380,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 381,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동3리",
+    "extra_area": "1반, 3~8반, 12반, \n13~25반(파주힐스테이트 1차)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동3리",
+    "extra_tokens": [
+      "1반",
+      "8반",
+      "12반",
+      "13",
+      "25반",
+      "파주힐스테이트",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 382,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동3리",
+    "extra_area": "2반, 37~40반(문산당동주공아파트 4단지)",
+    "note": "문산초",
+    "category": "normal",
+    "tong_key": "당동3리",
+    "extra_tokens": [
+      "2반",
+      "37",
+      "40반",
+      "문산당동주공아파트",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 383,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "당동5리",
+    "extra_area": "휴먼시아 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "당동5리",
+    "extra_tokens": [
+      "휴먼시아",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 384,
+    "school_name": "자유초",
+    "admin_area": "문산읍",
+    "tong_ri": "임진리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "임진리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 385,
+    "school_name": "자유초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 386,
+    "school_name": "자유초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 387,
+    "school_name": "장파초",
+    "admin_area": "파평면",
+    "tong_ri": "장파1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "장파1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 388,
+    "school_name": "장파초",
+    "admin_area": "파평면",
+    "tong_ri": "금파2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "금파2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 389,
+    "school_name": "장파초",
+    "admin_area": "적성면",
+    "tong_ri": "답곡리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "답곡리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 390,
+    "school_name": "장파초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 391,
+    "school_name": "장파초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 392,
+    "school_name": "적서초",
+    "admin_area": "적성면",
+    "tong_ri": "마지2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "마지2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 393,
+    "school_name": "적서초",
+    "admin_area": "적성면",
+    "tong_ri": "식현1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "식현1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 394,
+    "school_name": "적서초",
+    "admin_area": "적성면",
+    "tong_ri": "두지리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "두지리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 395,
+    "school_name": "적서초",
+    "admin_area": "적성면",
+    "tong_ri": "자장리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "자장리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 396,
+    "school_name": "적서초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 397,
+    "school_name": "적서초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 398,
+    "school_name": "적암초",
+    "admin_area": "적성면",
+    "tong_ri": "적암리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "적암리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 399,
+    "school_name": "적암초",
+    "admin_area": "적성면",
+    "tong_ri": "어유1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "어유1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 400,
+    "school_name": "적암초",
+    "admin_area": "적성면",
+    "tong_ri": "장현1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "장현1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 401,
+    "school_name": "적암초",
+    "admin_area": "적성면",
+    "tong_ri": "장현2리",
+    "extra_area": "",
+    "note": "마지초",
+    "category": "normal",
+    "tong_key": "장현2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 402,
+    "school_name": "적암초",
+    "admin_area": "적성면",
+    "tong_ri": "객현1~2리",
+    "extra_area": "",
+    "note": "마지초",
+    "category": "normal",
+    "tong_key": "객현1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 403,
+    "school_name": "적암초",
+    "admin_area": "적성면",
+    "tong_ri": "율포리",
+    "extra_area": "",
+    "note": "마지초",
+    "category": "normal",
+    "tong_key": "율포리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 404,
+    "school_name": "적암초",
+    "admin_area": "연천군 미산면",
+    "tong_ri": "삼화리",
+    "extra_area": "",
+    "note": "연천왕산초(연천군)",
+    "category": "normal",
+    "tong_key": "삼화리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 405,
+    "school_name": "적암초",
+    "admin_area": "연천군 전곡읍",
+    "tong_ri": "양원리",
+    "extra_area": "5반(816, 817번지)",
+    "note": "전곡초(연천군)",
+    "category": "normal",
+    "tong_key": "양원리",
+    "extra_tokens": [
+      "5반",
+      "816",
+      "817번지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 406,
+    "school_name": "적암초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 407,
+    "school_name": "적암초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 408,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "6통",
+    "extra_area": "가람마을 3단지",
+    "note": "한가람초",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "가람마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 409,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "10통",
+    "extra_area": "가람마을 6단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "10통",
+    "extra_tokens": [
+      "가람마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 410,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "12통",
+    "extra_area": "가람마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "12통",
+    "extra_tokens": [
+      "가람마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 411,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "13통",
+    "extra_area": "가람마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "가람마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 412,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "15통",
+    "extra_area": "가람마을 14단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": [
+      "가람마을",
+      "14단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 413,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "16통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 414,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "-",
+    "extra_area": "별하람마을 1단지(A5블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "-",
+    "extra_tokens": [
+      "별하람마을",
+      "1단지",
+      "A5블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 415,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "17통",
+    "extra_area": "별하람마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": [
+      "별하람마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 416,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "18통",
+    "extra_area": "별하람마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": [
+      "별하람마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 417,
+    "school_name": "지산초",
+    "admin_area": "운정1동",
+    "tong_ri": "-",
+    "extra_area": "가람마을 12단지(와동A1블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "-",
+    "extra_tokens": [
+      "가람마을",
+      "12단지",
+      "와동A1블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 418,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "1~6통, 19통",
+    "extra_area": "상지석동 일원",
+    "note": "능안초",
+    "category": "normal",
+    "tong_key": "1~6통,19통",
+    "extra_tokens": [
+      "상지석동",
+      "일원"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 419,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "7통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 420,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "14통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 421,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "8통",
+    "extra_area": "",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 422,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "9통",
+    "extra_area": "",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 423,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 제외",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 424,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 1차",
+    "note": "운정초, 와석초,\n파주와동초,\n호곡초(고양시)",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 425,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "15통",
+    "extra_area": "",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 426,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "16통",
+    "extra_area": "",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 427,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "17통",
+    "extra_area": "",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 428,
+    "school_name": "지산초",
+    "admin_area": "운정4동",
+    "tong_ri": "18통",
+    "extra_area": "",
+    "note": "운정초, 와석초,\n파주와동초",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 429,
+    "school_name": "지산초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 430,
+    "school_name": "지산초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 431,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "법원1~6리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법원1~6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 432,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "가야1~4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "가야1~4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 433,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "갈곡리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "갈곡리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 434,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "삼방1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "삼방1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 435,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "동문1리",
+    "extra_area": "1~2반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "동문1리",
+    "extra_tokens": [
+      "2반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 436,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "동문1리",
+    "extra_area": "3~5반",
+    "note": "파양초",
+    "category": "normal",
+    "tong_key": "동문1리",
+    "extra_tokens": [
+      "5반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 437,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "대능1~6리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "대능1~6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 438,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "오현1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "오현1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 439,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "직천1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "직천1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 440,
+    "school_name": "천현초",
+    "admin_area": "법원읍",
+    "tong_ri": "금곡1~2리",
+    "extra_area": "",
+    "note": "웅담초",
+    "category": "normal",
+    "tong_key": "금곡1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 441,
+    "school_name": "천현초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 442,
+    "school_name": "천현초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 443,
+    "school_name": "청미르초",
+    "admin_area": "운정5동",
+    "tong_ri": "30통",
+    "extra_area": "해오름마을 8단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "30통",
+    "extra_tokens": [
+      "해오름마을",
+      "8단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 444,
+    "school_name": "청미르초",
+    "admin_area": "운정5동",
+    "tong_ri": "미정",
+    "extra_area": "C18블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "C18블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 445,
+    "school_name": "청미르초",
+    "admin_area": "운정6동",
+    "tong_ri": "14통",
+    "extra_area": "물향기마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": [
+      "물향기마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 446,
+    "school_name": "청미르초",
+    "admin_area": "운정6동",
+    "tong_ri": "16통",
+    "extra_area": "물향기마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": [
+      "물향기마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 447,
+    "school_name": "청미르초",
+    "admin_area": "운정6동",
+    "tong_ri": "13통",
+    "extra_area": "물향기마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "물향기마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 448,
+    "school_name": "청미르초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 449,
+    "school_name": "청미르초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 450,
+    "school_name": "청석초",
+    "admin_area": "운정5동",
+    "tong_ri": "1통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 451,
+    "school_name": "청석초",
+    "admin_area": "운정5동",
+    "tong_ri": "2통",
+    "extra_area": "청석마을 8단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": [
+      "청석마을",
+      "8단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 452,
+    "school_name": "청석초",
+    "admin_area": "운정5동",
+    "tong_ri": "3통",
+    "extra_area": "청석마을 9단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3통",
+    "extra_tokens": [
+      "청석마을",
+      "9단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 453,
+    "school_name": "청석초",
+    "admin_area": "교하동",
+    "tong_ri": "9통",
+    "extra_area": "",
+    "note": "문발초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 454,
+    "school_name": "청석초",
+    "admin_area": "교하동",
+    "tong_ri": "11통",
+    "extra_area": "",
+    "note": "교하초",
+    "category": "normal",
+    "tong_key": "11통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 455,
+    "school_name": "청석초",
+    "admin_area": "교하동",
+    "tong_ri": "12통",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "12통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 456,
+    "school_name": "청석초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 457,
+    "school_name": "청석초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 458,
+    "school_name": "청암초",
+    "admin_area": "운정1동",
+    "tong_ri": "1통",
+    "extra_area": "2반",
+    "note": "한가람초",
+    "category": "normal",
+    "tong_key": "1통",
+    "extra_tokens": [
+      "2반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 459,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "2통 7반",
+    "extra_area": "C2, C7, C8 블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통7반",
+    "extra_tokens": [
+      "C2",
+      "C7",
+      "C8",
+      "블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 460,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 1~17반",
+    "extra_area": "산내마을 11단지",
+    "note": "산내초",
+    "category": "normal",
+    "tong_key": "11통1~17반",
+    "extra_tokens": [
+      "산내마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 461,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "11통 18반",
+    "extra_area": "C4, C15, C16, C17, D6블록",
+    "note": "산내초",
+    "category": "normal",
+    "tong_key": "11통18반",
+    "extra_tokens": [
+      "C4",
+      "C15",
+      "C16",
+      "C17",
+      "D6블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 462,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "12~13통",
+    "extra_area": "산내마을 8단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "12~13통",
+    "extra_tokens": [
+      "산내마을",
+      "8단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 463,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "13통 17반",
+    "extra_area": "C13, C19",
+    "note": "",
+    "category": "normal",
+    "tong_key": "13통17반",
+    "extra_tokens": [
+      "C13",
+      "C19"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 464,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "14통",
+    "extra_area": "산내마을 6단지",
+    "note": "산들초",
+    "category": "normal",
+    "tong_key": "14통",
+    "extra_tokens": [
+      "산내마을",
+      "6단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 465,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "25통",
+    "extra_area": "산내마을 7단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "25통",
+    "extra_tokens": [
+      "산내마을",
+      "7단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 466,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "26통",
+    "extra_area": "산내마을 12단지(A35블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "26통",
+    "extra_tokens": [
+      "산내마을",
+      "12단지",
+      "A35블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 467,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "27통 1~6반",
+    "extra_area": "산내마을 13단지(A37블록)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "27통1~6반",
+    "extra_tokens": [
+      "산내마을",
+      "13단지",
+      "A37블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 468,
+    "school_name": "청암초",
+    "admin_area": "운정2동",
+    "tong_ri": "27통 7반",
+    "extra_area": "목동동 C14블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "27통7반",
+    "extra_tokens": [
+      "목동동",
+      "C14블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 469,
+    "school_name": "청암초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 470,
+    "school_name": "청암초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 471,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "4통",
+    "extra_area": "초롱꽃마을 8단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "4통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "8단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 472,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "5통",
+    "extra_area": "초롱꽃마을 9단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "9단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 473,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "6통",
+    "extra_area": "초롱꽃마을 10단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "10단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 474,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "7통",
+    "extra_area": "초롱꽃마을 11단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 475,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "8통",
+    "extra_area": "초롱꽃마을 12단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "12단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 476,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "9통",
+    "extra_area": "초롱꽃마을 13단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": [
+      "초롱꽃마을",
+      "13단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 477,
+    "school_name": "초롱초",
+    "admin_area": "운정6동",
+    "tong_ri": "-",
+    "extra_area": "C5블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "-",
+    "extra_tokens": [
+      "C5블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 478,
+    "school_name": "초롱초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 479,
+    "school_name": "초롱초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 480,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "축현1리",
+    "extra_area": "1반, 3반, 4반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "축현1리",
+    "extra_tokens": [
+      "1반",
+      "3반",
+      "4반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 481,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "축현2~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "축현2~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 482,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "만우리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "만우리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 483,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "오금1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "오금1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 484,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "대동리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "대동리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 485,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "법흥3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법흥3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 486,
+    "school_name": "탄현초",
+    "admin_area": "탄현면",
+    "tong_ri": "금산1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "금산1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 487,
+    "school_name": "탄현초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 488,
+    "school_name": "탄현초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 489,
+    "school_name": "통일초",
+    "admin_area": "탄현면",
+    "tong_ri": "성동리 일부",
+    "extra_area": "298-7~298-17, 694~700, 692-21, \n692-22, 산71-2~산71-10",
+    "note": "",
+    "category": "normal",
+    "tong_key": "성동리일부",
+    "extra_tokens": [
+      "298",
+      "298",
+      "17",
+      "694",
+      "700",
+      "692",
+      "21",
+      "692",
+      "22",
+      "산71",
+      "산71",
+      "10"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 490,
+    "school_name": "통일초",
+    "admin_area": "탄현면",
+    "tong_ri": "법흥1리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법흥1리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 491,
+    "school_name": "통일초",
+    "admin_area": "탄현면",
+    "tong_ri": "법흥4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법흥4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 492,
+    "school_name": "통일초",
+    "admin_area": "탄현면",
+    "tong_ri": "법흥5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법흥5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 493,
+    "school_name": "통일초",
+    "admin_area": "탄현면",
+    "tong_ri": "법흥6리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "법흥6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 494,
+    "school_name": "통일초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 495,
+    "school_name": "통일초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 496,
+    "school_name": "파양초",
+    "admin_area": "파평면",
+    "tong_ri": "율곡4리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "율곡4리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 497,
+    "school_name": "파양초",
+    "admin_area": "문산읍",
+    "tong_ri": "이천1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "이천1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 498,
+    "school_name": "파양초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유4~5리",
+    "extra_area": "",
+    "note": "문산동초",
+    "category": "normal",
+    "tong_key": "선유4~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 499,
+    "school_name": "파양초",
+    "admin_area": "문산읍",
+    "tong_ri": "선유6리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "선유6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 500,
+    "school_name": "파양초",
+    "admin_area": "법원읍",
+    "tong_ri": "동문1리",
+    "extra_area": "3~5반",
+    "note": "천현초",
+    "category": "normal",
+    "tong_key": "동문1리",
+    "extra_tokens": [
+      "5반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 501,
+    "school_name": "파양초",
+    "admin_area": "법원읍",
+    "tong_ri": "동문2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "동문2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 502,
+    "school_name": "파양초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 503,
+    "school_name": "파양초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 504,
+    "school_name": "파주초",
+    "admin_area": "파주읍",
+    "tong_ri": "파주1~7리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "파주1~7리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 505,
+    "school_name": "파주초",
+    "admin_area": "파주읍",
+    "tong_ri": "부곡1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "부곡1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 506,
+    "school_name": "파주초",
+    "admin_area": "파주읍",
+    "tong_ri": "백석1~5리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "백석1~5리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 507,
+    "school_name": "파주초",
+    "admin_area": "파주읍",
+    "tong_ri": "봉서3리",
+    "extra_area": "1~3반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "봉서3리",
+    "extra_tokens": [
+      "3반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 508,
+    "school_name": "파주초",
+    "admin_area": "파주읍",
+    "tong_ri": "봉암1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "봉암1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 509,
+    "school_name": "파주초",
+    "admin_area": "파주읍",
+    "tong_ri": "향양1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "향양1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 510,
+    "school_name": "파주초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 511,
+    "school_name": "파주초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 512,
+    "school_name": "파주대원초",
+    "admin_area": "조리읍",
+    "tong_ri": "대원1리, 7리",
+    "extra_area": "",
+    "note": "능안초",
+    "category": "normal",
+    "tong_key": "대원1리,7리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 513,
+    "school_name": "파주대원초",
+    "admin_area": "조리읍",
+    "tong_ri": "대원2~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "대원2~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 514,
+    "school_name": "파주대원초",
+    "admin_area": "조리읍",
+    "tong_ri": "대원5~6리",
+    "extra_area": "동문아파트",
+    "note": "",
+    "category": "normal",
+    "tong_key": "대원5~6리",
+    "extra_tokens": [
+      "동문아파트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 515,
+    "school_name": "파주대원초",
+    "admin_area": "조리읍",
+    "tong_ri": "봉일천10리",
+    "extra_area": "",
+    "note": "봉일천초",
+    "category": "normal",
+    "tong_key": "봉일천10리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 516,
+    "school_name": "파주대원초",
+    "admin_area": "고양시 고봉동",
+    "tong_ri": "4통",
+    "extra_area": "",
+    "note": "벽제초(고양시)\n성석초(고양시)",
+    "category": "normal",
+    "tong_key": "4통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 517,
+    "school_name": "파주대원초",
+    "admin_area": "고양시 고봉동",
+    "tong_ri": "25통",
+    "extra_area": "",
+    "note": "벽제초(고양시)\n성석초(고양시)",
+    "category": "normal",
+    "tong_key": "25통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 518,
+    "school_name": "파주대원초",
+    "admin_area": "고양시 고봉동",
+    "tong_ri": "5통",
+    "extra_area": "",
+    "note": "능안초\n성석초(고양시)",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 519,
+    "school_name": "파주대원초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 520,
+    "school_name": "파주대원초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 521,
+    "school_name": "파주송화초",
+    "admin_area": "금촌1동",
+    "tong_ri": "5통",
+    "extra_area": "신안실크밸리 1차",
+    "note": "금촌초\n금신초",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "신안실크밸리",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 522,
+    "school_name": "파주송화초",
+    "admin_area": "금촌1동",
+    "tong_ri": "6통",
+    "extra_area": "신안실크밸리 2차",
+    "note": "금촌초\n금신초",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "신안실크밸리",
+      "2차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 523,
+    "school_name": "파주송화초",
+    "admin_area": "금촌3동",
+    "tong_ri": "3~5통",
+    "extra_area": "팜스프링아파트",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3~5통",
+    "extra_tokens": [
+      "팜스프링아파트"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 524,
+    "school_name": "파주송화초",
+    "admin_area": "월롱면",
+    "tong_ri": "영태3리,4리,\n6리",
+    "extra_area": "",
+    "note": "금신초",
+    "category": "normal",
+    "tong_key": "영태3리,4리,6리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 525,
+    "school_name": "파주송화초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 526,
+    "school_name": "파주송화초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 527,
+    "school_name": "파주와동초",
+    "admin_area": "운정1동",
+    "tong_ri": "5통",
+    "extra_area": "가람마을 8단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "5통",
+    "extra_tokens": [
+      "가람마을",
+      "8단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 528,
+    "school_name": "파주와동초",
+    "admin_area": "운정1동",
+    "tong_ri": "7통",
+    "extra_area": "가람마을 9단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7통",
+    "extra_tokens": [
+      "가람마을",
+      "9단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 529,
+    "school_name": "파주와동초",
+    "admin_area": "운정1동",
+    "tong_ri": "8통",
+    "extra_area": "가람마을 10단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": [
+      "가람마을",
+      "10단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 530,
+    "school_name": "파주와동초",
+    "admin_area": "운정1동",
+    "tong_ri": "9통",
+    "extra_area": "가람마을 11단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": [
+      "가람마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 531,
+    "school_name": "파주와동초",
+    "admin_area": "운정1동",
+    "tong_ri": "미정",
+    "extra_area": "P2블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "미정",
+    "extra_tokens": [
+      "P2블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 532,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "8통",
+    "extra_area": "",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "8통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 533,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "9통",
+    "extra_area": "",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "9통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 534,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 제외",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "제외"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 535,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "13통",
+    "extra_area": "자연에 빌라 1차",
+    "note": "와석초, 운정초, \n지산초,\n호곡초(고양시)",
+    "category": "normal",
+    "tong_key": "13통",
+    "extra_tokens": [
+      "자연에",
+      "빌라",
+      "1차"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 536,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "15통",
+    "extra_area": "",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 537,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "16통",
+    "extra_area": "",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "16통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 538,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "17통",
+    "extra_area": "",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "17통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 539,
+    "school_name": "파주와동초",
+    "admin_area": "운정4동",
+    "tong_ri": "18통",
+    "extra_area": "",
+    "note": "와석초, 운정초, \n지산초",
+    "category": "normal",
+    "tong_key": "18통",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 540,
+    "school_name": "파주와동초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 541,
+    "school_name": "파주와동초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 542,
+    "school_name": "파평초",
+    "admin_area": "파평면",
+    "tong_ri": "두포1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "두포1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 543,
+    "school_name": "파평초",
+    "admin_area": "파평면",
+    "tong_ri": "율곡1~3리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "율곡1~3리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 544,
+    "school_name": "파평초",
+    "admin_area": "파평면",
+    "tong_ri": "마산1~2리",
+    "extra_area": "",
+    "note": "",
+    "category": "normal",
+    "tong_key": "마산1~2리",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 545,
+    "school_name": "파평초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 546,
+    "school_name": "파평초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 547,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "1통",
+    "extra_area": "1반",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통",
+    "extra_tokens": [
+      "1반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 548,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "1통",
+    "extra_area": "2반",
+    "note": "청암초",
+    "category": "normal",
+    "tong_key": "1통",
+    "extra_tokens": [
+      "2반"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 549,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "2통",
+    "extra_area": "C1, C6블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통",
+    "extra_tokens": [
+      "C1",
+      "C6블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 550,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "3통",
+    "extra_area": "가람마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3통",
+    "extra_tokens": [
+      "가람마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 551,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "4통",
+    "extra_area": "가람마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "4통",
+    "extra_tokens": [
+      "가람마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 552,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "6통",
+    "extra_area": "가람마을 3단지",
+    "note": "지산초",
+    "category": "normal",
+    "tong_key": "6통",
+    "extra_tokens": [
+      "가람마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 553,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "11통",
+    "extra_area": "가람마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "11통",
+    "extra_tokens": [
+      "가람마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 554,
+    "school_name": "한가람초",
+    "admin_area": "운정1동",
+    "tong_ri": "-",
+    "extra_area": "C1블록(운정3지구)",
+    "note": "",
+    "category": "normal",
+    "tong_key": "-",
+    "extra_tokens": [
+      "C1블록",
+      "운정3지구"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 555,
+    "school_name": "한가람초",
+    "admin_area": "운정2동",
+    "tong_ri": "1통, 2통 1~6반",
+    "extra_area": "해솔마을 11단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "1통,2통1~6반",
+    "extra_tokens": [
+      "해솔마을",
+      "11단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 556,
+    "school_name": "한가람초",
+    "admin_area": "운정2동",
+    "tong_ri": "2통 7반",
+    "extra_area": "B1블록",
+    "note": "",
+    "category": "normal",
+    "tong_key": "2통7반",
+    "extra_tokens": [
+      "B1블록"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 557,
+    "school_name": "한가람초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 558,
+    "school_name": "한가람초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 559,
+    "school_name": "한빛초",
+    "admin_area": "운정3동",
+    "tong_ri": "15통",
+    "extra_area": "한빛마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "15통",
+    "extra_tokens": [
+      "한빛마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 560,
+    "school_name": "한빛초",
+    "admin_area": "운정3동",
+    "tong_ri": "16~17통",
+    "extra_area": "한빛마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "16~17통",
+    "extra_tokens": [
+      "한빛마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 561,
+    "school_name": "한빛초",
+    "admin_area": "운정3동",
+    "tong_ri": "18~19통",
+    "extra_area": "한빛마을 3단지",
+    "note": "와석초",
+    "category": "normal",
+    "tong_key": "18~19통",
+    "extra_tokens": [
+      "한빛마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 562,
+    "school_name": "한빛초",
+    "admin_area": "운정3동",
+    "tong_ri": "20~22통",
+    "extra_area": "한빛마을 5단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "20~22통",
+    "extra_tokens": [
+      "한빛마을",
+      "5단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 563,
+    "school_name": "한빛초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 564,
+    "school_name": "한빛초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 565,
+    "school_name": "해솔초",
+    "admin_area": "운정2동",
+    "tong_ri": "3통",
+    "extra_area": "해솔마을 4단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "3통",
+    "extra_tokens": [
+      "해솔마을",
+      "4단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 566,
+    "school_name": "해솔초",
+    "admin_area": "운정2동",
+    "tong_ri": "4통",
+    "extra_area": "해솔마을 1단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "4통",
+    "extra_tokens": [
+      "해솔마을",
+      "1단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 567,
+    "school_name": "해솔초",
+    "admin_area": "운정2동",
+    "tong_ri": "5~6통",
+    "extra_area": "해솔마을 2단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "5~6통",
+    "extra_tokens": [
+      "해솔마을",
+      "2단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 568,
+    "school_name": "해솔초",
+    "admin_area": "운정2동",
+    "tong_ri": "7~8통",
+    "extra_area": "해솔마을 3단지",
+    "note": "",
+    "category": "normal",
+    "tong_key": "7~8통",
+    "extra_tokens": [
+      "해솔마을",
+      "3단지"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 569,
+    "school_name": "해솔초",
+    "admin_area": "기타(통학구역외)",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "special",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관내)",
+    "row_number": 570,
+    "school_name": "해솔초",
+    "admin_area": "합계",
+    "tong_ri": "",
+    "extra_area": "",
+    "note": "",
+    "category": "summary",
+    "tong_key": "",
+    "extra_tokens": []
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 6,
+    "school_name": "고양",
+    "admin_area": "벽제초",
+    "tong_ri": "고봉동",
+    "extra_area": "사리현동",
+    "note": "고양시 벽제초\n고양시 성석초\n파주대원초",
+    "category": "normal",
+    "tong_key": "고봉동",
+    "extra_tokens": [
+      "사리현동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 7,
+    "school_name": "고양",
+    "admin_area": "벽제초",
+    "tong_ri": "고봉동",
+    "extra_area": "사리현동",
+    "note": "고양시 벽제초\n고양시 성석초\n파주대원초",
+    "category": "normal",
+    "tong_key": "고봉동",
+    "extra_tokens": [
+      "사리현동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 8,
+    "school_name": "고양",
+    "admin_area": "성석초",
+    "tong_ri": "고봉동",
+    "extra_area": "사리현동",
+    "note": "고양시 벽제초\n고양시 성석초\n파주대원초",
+    "category": "normal",
+    "tong_key": "고봉동",
+    "extra_tokens": [
+      "사리현동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 9,
+    "school_name": "고양",
+    "admin_area": "성석초",
+    "tong_ri": "고봉동",
+    "extra_area": "사리현동",
+    "note": "고양시 성석초\n능안초\n파주대원초",
+    "category": "normal",
+    "tong_key": "고봉동",
+    "extra_tokens": [
+      "사리현동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 10,
+    "school_name": "고양",
+    "admin_area": "성석초",
+    "tong_ri": "고봉동",
+    "extra_area": "사리현동",
+    "note": "고양시 벽제초\n고양시 성석초\n파주대원초",
+    "category": "normal",
+    "tong_key": "고봉동",
+    "extra_tokens": [
+      "사리현동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 11,
+    "school_name": "고양",
+    "admin_area": "호곡초",
+    "tong_ri": "운정4동",
+    "extra_area": "야당동",
+    "note": "고양 호곡초\n와석초\n운정초\n지산초\n파주와동초",
+    "category": "normal",
+    "tong_key": "운정4동",
+    "extra_tokens": [
+      "야당동"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 12,
+    "school_name": "양주",
+    "admin_area": "남면초",
+    "tong_ri": "적성면",
+    "extra_area": "무건리",
+    "note": "마지초",
+    "category": "normal",
+    "tong_key": "적성면",
+    "extra_tokens": [
+      "무건리"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 13,
+    "school_name": "연천",
+    "admin_area": "연천왕산초",
+    "tong_ri": "미산면",
+    "extra_area": "삼화리",
+    "note": "연천왕산초\n적암초",
+    "category": "normal",
+    "tong_key": "미산면",
+    "extra_tokens": [
+      "삼화리"
+    ]
+  },
+  {
+    "sheet_name": "재학생 현황(관외)",
+    "row_number": 14,
+    "school_name": "연천",
+    "admin_area": "전곡초",
+    "tong_ri": "전곡읍",
+    "extra_area": "양원리",
+    "note": "전곡초\n적암초",
+    "category": "normal",
+    "tong_key": "전곡읍",
+    "extra_tokens": [
+      "양원리"
+    ]
+  }
+]

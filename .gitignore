@@ -1,0 +1,17 @@
+.env
+__pycache__/
+.vercel/
+.DS_Store
+*.pyc
+*.pyo
+
+# runtime outputs
+주소변환_로그/
+주소변환_캐시.pkl
+data/runtime/
+
+# large local spreadsheets and outputs
+*.xlsx
+*.xls
+통학구역별 재학생 현황 보고/
+학생 주소 명렬표/
