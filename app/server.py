@@ -9,14 +9,12 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import os
 import traceback
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import urlparse
 from urllib.parse import quote
 
-from .config import STATIC_DIR, TEMPLATE_DIR, load_admin_config, save_admin_config, AdminConfig, DataSources, RuntimeSettings
+from .config import STATIC_DIR, TEMPLATE_DIR, load_admin_config
 from .datasets import ensure_datasets
 from .services import (
-    clear_context_cache,
-    clear_runtime_data,
     get_context,
     get_download,
     get_job,
@@ -192,64 +190,6 @@ def render_progress_page(job_id: str) -> bytes:
     return html.encode("utf-8")
 
 
-def render_admin_page(message: str = "", error: str = "") -> bytes:
-    config = load_admin_config()
-    is_vercel = bool(os.getenv("VERCEL"))
-    source_readonly = "readonly" if is_vercel else ""
-    source_note = "Vercel 배포에서는 로컬 원본 경로 대신 저장소의 사전 생성 JSON 데이터셋을 사용합니다." if is_vercel else "내부망 로컬 서버에서는 원본 엑셀 경로를 지정해 데이터셋을 다시 생성할 수 있습니다."
-    note = f'<div class="error">{esc(error)}</div>' if error else (f'<div class="hint">{esc(message)}</div>' if message else "")
-    html = f"""
-    <!doctype html>
-    <html lang="ko">
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{esc(config.runtime.app_title)} 관리자</title>
-        <link rel="stylesheet" href="/static/styles.css">
-      </head>
-      <body>
-        <main class="shell">
-          <section class="panel">
-            <h1>관리자 설정</h1>
-            <p class="hint">로그인 없이 내부망에서 쓰는 배포용 설정 화면입니다. 저장 후 다음 처리부터 즉시 반영됩니다.</p>
-            <p class="hint">{esc(source_note)}</p>
-            {note}
-            <form method="post" action="/admin" class="stack">
-              <label for="app_title">프로그램 제목</label>
-              <input id="app_title" type="text" name="app_title" value="{esc(config.runtime.app_title)}" required>
-              <label for="bind_host">바인드 호스트</label>
-              <input id="bind_host" type="text" name="bind_host" value="{esc(config.runtime.bind_host)}" required>
-              <label for="port">포트</label>
-              <input id="port" type="number" name="port" value="{config.runtime.port}" required>
-              <label for="result_ttl_minutes">결과 자동 삭제(분)</label>
-              <input id="result_ttl_minutes" type="number" name="result_ttl_minutes" value="{config.runtime.result_ttl_minutes}" required>
-              <label for="job_ttl_minutes">작업 기록 자동 삭제(분)</label>
-              <input id="job_ttl_minutes" type="number" name="job_ttl_minutes" value="{config.runtime.job_ttl_minutes}" required>
-              <label for="cleanup_interval_seconds">정리 주기(초)</label>
-              <input id="cleanup_interval_seconds" type="number" name="cleanup_interval_seconds" value="{config.runtime.cleanup_interval_seconds}" required>
-              <label for="admin_source">통·리·반 원본 파일</label>
-              <input id="admin_source" type="text" name="admin_source" value="{esc(config.data_sources.admin_source)}" required {source_readonly}>
-              <label for="report_template_source">보고서 서식 파일</label>
-              <input id="report_template_source" type="text" name="report_template_source" value="{esc(config.data_sources.report_template_source)}" required {source_readonly}>
-              <label for="school_zone_source">학교 통학구역 파일</label>
-              <input id="school_zone_source" type="text" name="school_zone_source" value="{esc(config.data_sources.school_zone_source)}" required {source_readonly}>
-              <label for="legacy_district_source">보조 관할구역 파일(선택)</label>
-              <input id="legacy_district_source" type="text" name="legacy_district_source" value="{esc(config.data_sources.legacy_district_source)}" {source_readonly}>
-              <button type="submit">설정 저장</button>
-            </form>
-            <hr class="admin-separator">
-            <form method="post" action="/admin/clear-data" class="stack">
-              <p class="hint">서버에 임시 저장된 처리 결과/다운로드 데이터/작업 기록을 즉시 삭제합니다.</p>
-              <button type="submit" class="danger">서버 데이터 즉시 삭제</button>
-            </form>
-          </section>
-        </main>
-      </body>
-    </html>
-    """
-    return html.encode("utf-8")
-
-
 class AppHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
@@ -259,10 +199,6 @@ class AppHandler(BaseHTTPRequestHandler):
                 self._send_html(render_index())
             except Exception as exc:
                 self._send_html(render_index(error=f"초기화 실패: {exc}"), status=500)
-            return
-
-        if parsed.path == "/admin":
-            self._send_html(render_admin_page())
             return
 
         if parsed.path.startswith("/static/"):
@@ -325,13 +261,6 @@ class AppHandler(BaseHTTPRequestHandler):
                 status=500,
             )
             return
-        if self.path == "/admin":
-            self._handle_admin_post()
-            return
-        if self.path == "/admin/clear-data":
-            self._handle_clear_data_post()
-            return
-
         if self.path != "/process":
             self.send_error(HTTPStatus.NOT_FOUND)
             return
@@ -366,58 +295,6 @@ class AppHandler(BaseHTTPRequestHandler):
         except Exception as exc:
             traceback.print_exc()
             self._send_html(render_index(error=str(exc)), status=400)
-
-    def _handle_admin_post(self) -> None:
-        if cgi is None:
-            self._send_html(render_admin_page(error="현재 Python 런타임에서 cgi 모듈을 사용할 수 없습니다."), status=500)
-            return
-        form = cgi.FieldStorage(
-            fp=self.rfile,
-            headers=self.headers,
-            environ={
-                "REQUEST_METHOD": "POST",
-                "CONTENT_TYPE": self.headers.get("Content-Type", ""),
-            },
-        )
-        try:
-            config = AdminConfig(
-                runtime=RuntimeSettings(
-                    app_title=clean_field(form.getfirst("app_title", "")),
-                    bind_host=clean_field(form.getfirst("bind_host", "")) or "0.0.0.0",
-                    port=int(clean_field(form.getfirst("port", "8000")) or 8000),
-                    result_ttl_minutes=int(clean_field(form.getfirst("result_ttl_minutes", "30")) or 30),
-                    job_ttl_minutes=int(clean_field(form.getfirst("job_ttl_minutes", "60")) or 60),
-                    cleanup_interval_seconds=int(clean_field(form.getfirst("cleanup_interval_seconds", "300")) or 300),
-                ),
-                data_sources=DataSources(
-                    admin_source=clean_field(form.getfirst("admin_source", "")),
-                    report_template_source=clean_field(form.getfirst("report_template_source", "")),
-                    school_zone_source=clean_field(form.getfirst("school_zone_source", "")),
-                    legacy_district_source=clean_field(form.getfirst("legacy_district_source", "")),
-                ),
-            )
-            save_admin_config(config)
-            clear_context_cache()
-            ensure_datasets()
-            self._send_html(render_admin_page(message="설정을 저장했습니다. 새 네트워크 주소/포트는 서버 재시작 후 반영됩니다."))
-        except Exception as exc:
-            traceback.print_exc()
-            self._send_html(render_admin_page(error=f"설정 저장 실패: {exc}"), status=400)
-
-    def _handle_clear_data_post(self) -> None:
-        try:
-            stats = clear_runtime_data()
-            self._send_html(
-                render_admin_page(
-                    message=(
-                        f"서버 데이터를 삭제했습니다. "
-                        f"(결과 {stats['results']}건, 다운로드 {stats['downloads']}건, 작업기록 {stats['jobs']}건)"
-                    )
-                )
-            )
-        except Exception as exc:
-            traceback.print_exc()
-            self._send_html(render_admin_page(error=f"서버 데이터 삭제 실패: {exc}"), status=400)
 
     def _serve_static(self, relative_path: str) -> None:
         normalized = os.path.normpath(relative_path).lstrip(os.sep)

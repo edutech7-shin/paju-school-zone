@@ -6,7 +6,6 @@
 
 - 실행: `python3 webapp.py`
 - 기본 접속: `http://0.0.0.0:8000`
-- 관리자 화면: `http://127.0.0.1:8000/admin`
 
 ## 2) Vercel 배포 구조
 
@@ -41,19 +40,12 @@ vercel --prod
 - `.vercelignore`로 Vercel 배포 아카이브에서 불필요 파일 제외
 - 배포에 필요한 코드/템플릿/정적 파일(`app/`, `api/`, `templates/`, `static/`, `data/generated/`)만 유지
 
-## 5) 관리자 설정 항목
+## 5) 설정 관리
 
-`/admin` 또는 `data/admin/admin_config.json`에서 아래를 수정할 수 있습니다.
+운영 중 설정 변경은 코드/환경변수 기준으로 반영합니다.
 
-- 프로그램 제목
-- 서버 바인드 주소/포트
-- 결과 자동 삭제 시간
-- 작업 기록 자동 삭제 시간
-- 통·리·반 원본 파일 경로
-- 보고서 서식 파일 경로
-- 학교 통학구역 파일 경로
-- 보조 관할구역 파일 경로
-  - `legacy_district_source`는 선택 항목이며, 비어 있거나 파일이 없어도 앱은 동작합니다.
+- `data/admin/admin_config.json`으로 기본 설정 관리
+- `REPORT_TEMPLATE_URL` 환경변수로 공용 보고서 서식 파일 URL 관리
 
 ## 6) 개인정보 보호
 
@@ -67,5 +59,4 @@ vercel --prod
 ## 7) 운영 시 주의
 
 - 로컬 내부망 운영 시 외부 공개 금지
-- 관리자 화면은 별도 인증이 없으므로 접근 통제 필수
 - Vercel Serverless 특성상 인스턴스 재시작 시 메모리 데이터는 유지되지 않음

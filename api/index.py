@@ -2,12 +2,9 @@ from __future__ import annotations
 
 from flask import Flask, Response, jsonify, redirect, request, send_from_directory
 
-from app.config import AdminConfig, DataSources, RuntimeSettings, save_admin_config
 from app.datasets import ensure_datasets
-from app.server import render_admin_page, render_index, render_progress_page
+from app.server import render_index, render_progress_page
 from app.services import (
-    clear_context_cache,
-    clear_runtime_data,
     get_download,
     get_job,
     get_result_data,
@@ -27,58 +24,6 @@ def index() -> Response:
         return Response(render_index(), mimetype="text/html")
     except Exception as exc:  # pragma: no cover - runtime safe fallback
         return Response(render_index(error=f"초기화 실패: {exc}"), status=500, mimetype="text/html")
-
-
-@app.get("/admin")
-def admin_page() -> Response:
-    return Response(render_admin_page(), mimetype="text/html")
-
-
-@app.post("/admin")
-def admin_save() -> Response:
-    try:
-        config = AdminConfig(
-            runtime=RuntimeSettings(
-                app_title=(request.form.get("app_title") or "").strip(),
-                bind_host=(request.form.get("bind_host") or "0.0.0.0").strip() or "0.0.0.0",
-                port=int((request.form.get("port") or "8000").strip() or 8000),
-                result_ttl_minutes=int((request.form.get("result_ttl_minutes") or "30").strip() or 30),
-                job_ttl_minutes=int((request.form.get("job_ttl_minutes") or "60").strip() or 60),
-                cleanup_interval_seconds=int((request.form.get("cleanup_interval_seconds") or "300").strip() or 300),
-            ),
-            data_sources=DataSources(
-                admin_source=(request.form.get("admin_source") or "").strip(),
-                report_template_source=(request.form.get("report_template_source") or "").strip(),
-                school_zone_source=(request.form.get("school_zone_source") or "").strip(),
-                legacy_district_source=(request.form.get("legacy_district_source") or "").strip(),
-            ),
-        )
-        save_admin_config(config)
-        clear_context_cache()
-        ensure_datasets()
-        return Response(
-            render_admin_page(message="설정을 저장했습니다. 다음 요청부터 반영됩니다."),
-            mimetype="text/html",
-        )
-    except Exception as exc:
-        return Response(render_admin_page(error=f"설정 저장 실패: {exc}"), status=400, mimetype="text/html")
-
-
-@app.post("/admin/clear-data")
-def admin_clear_data() -> Response:
-    try:
-        stats = clear_runtime_data()
-        return Response(
-            render_admin_page(
-                message=(
-                    f"서버 데이터를 삭제했습니다. "
-                    f"(결과 {stats['results']}건, 다운로드 {stats['downloads']}건, 작업기록 {stats['jobs']}건)"
-                )
-            ),
-            mimetype="text/html",
-        )
-    except Exception as exc:
-        return Response(render_admin_page(error=f"서버 데이터 삭제 실패: {exc}"), status=400, mimetype="text/html")
 
 
 @app.post("/process")
