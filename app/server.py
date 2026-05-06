@@ -98,7 +98,7 @@ def render_index(result: dict | None = None, error: str = "") -> bytes:
         result_html = f"""
         {summary_html}
         <section class="panel">
-          <h2>브라우저 미리보기</h2>
+          <h2>학구별 현황 미리보기</h2>
           <div class="table-wrap">
             <table>
               <thead>
