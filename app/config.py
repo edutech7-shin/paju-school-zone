@@ -6,10 +6,11 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+IS_VERCEL = bool(os.getenv("VERCEL"))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 GENERATED_DIR = os.path.join(DATA_DIR, "generated")
 ADMIN_DIR = os.path.join(DATA_DIR, "admin")
-RUNTIME_DIR = os.path.join(DATA_DIR, "runtime")
+RUNTIME_DIR = os.path.join("/tmp", "addressConvert", "runtime") if IS_VERCEL else os.path.join(DATA_DIR, "runtime")
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
@@ -61,9 +62,10 @@ DEFAULT_CONFIG = AdminConfig(
 
 
 def ensure_dirs() -> None:
-    os.makedirs(DATA_DIR, exist_ok=True)
-    os.makedirs(GENERATED_DIR, exist_ok=True)
-    os.makedirs(ADMIN_DIR, exist_ok=True)
+    if not IS_VERCEL:
+        os.makedirs(DATA_DIR, exist_ok=True)
+        os.makedirs(GENERATED_DIR, exist_ok=True)
+        os.makedirs(ADMIN_DIR, exist_ok=True)
     os.makedirs(RUNTIME_DIR, exist_ok=True)
 
 
