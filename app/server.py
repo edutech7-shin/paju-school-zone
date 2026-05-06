@@ -14,7 +14,16 @@ from urllib.parse import quote
 
 from .config import STATIC_DIR, TEMPLATE_DIR, load_admin_config, save_admin_config, AdminConfig, DataSources, RuntimeSettings
 from .datasets import ensure_datasets
-from .services import clear_context_cache, get_context, get_download, get_job, get_result_data, start_cleanup_worker, start_job
+from .services import (
+    clear_context_cache,
+    clear_runtime_data,
+    get_context,
+    get_download,
+    get_job,
+    get_result_data,
+    start_cleanup_worker,
+    start_job,
+)
 
 
 INDEX_TEMPLATE = os.path.join(TEMPLATE_DIR, "index.html")
@@ -228,6 +237,11 @@ def render_admin_page(message: str = "", error: str = "") -> bytes:
               <input id="legacy_district_source" type="text" name="legacy_district_source" value="{esc(config.data_sources.legacy_district_source)}" {source_readonly}>
               <button type="submit">설정 저장</button>
             </form>
+            <hr class="admin-separator">
+            <form method="post" action="/admin/clear-data" class="stack">
+              <p class="hint">서버에 임시 저장된 처리 결과/다운로드 데이터/작업 기록을 즉시 삭제합니다.</p>
+              <button type="submit" class="danger">서버 데이터 즉시 삭제</button>
+            </form>
           </section>
         </main>
       </body>
@@ -314,6 +328,9 @@ class AppHandler(BaseHTTPRequestHandler):
         if self.path == "/admin":
             self._handle_admin_post()
             return
+        if self.path == "/admin/clear-data":
+            self._handle_clear_data_post()
+            return
 
         if self.path != "/process":
             self.send_error(HTTPStatus.NOT_FOUND)
@@ -386,6 +403,21 @@ class AppHandler(BaseHTTPRequestHandler):
         except Exception as exc:
             traceback.print_exc()
             self._send_html(render_admin_page(error=f"설정 저장 실패: {exc}"), status=400)
+
+    def _handle_clear_data_post(self) -> None:
+        try:
+            stats = clear_runtime_data()
+            self._send_html(
+                render_admin_page(
+                    message=(
+                        f"서버 데이터를 삭제했습니다. "
+                        f"(결과 {stats['results']}건, 다운로드 {stats['downloads']}건, 작업기록 {stats['jobs']}건)"
+                    )
+                )
+            )
+        except Exception as exc:
+            traceback.print_exc()
+            self._send_html(render_admin_page(error=f"서버 데이터 삭제 실패: {exc}"), status=400)
 
     def _serve_static(self, relative_path: str) -> None:
         normalized = os.path.normpath(relative_path).lstrip(os.sep)

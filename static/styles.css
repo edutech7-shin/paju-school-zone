@@ -98,7 +98,9 @@ label {
 
 textarea,
 input[type="file"],
-input[type="text"] {
+input[type="text"],
+input[type="date"],
+input[type="number"] {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -147,6 +149,20 @@ button {
 button:hover {
   background: var(--accent-strong);
   transform: translateY(-1px);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: #7f2020;
+}
+
+.admin-separator {
+  margin: 22px 0;
+  border: 0;
+  border-top: 1px solid rgba(68, 53, 36, 0.15);
 }
 
 .result-grid {

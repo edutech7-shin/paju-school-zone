@@ -7,6 +7,7 @@ from app.datasets import ensure_datasets
 from app.server import render_admin_page, render_index, render_progress_page
 from app.services import (
     clear_context_cache,
+    clear_runtime_data,
     get_download,
     get_job,
     get_result_data,
@@ -61,6 +62,23 @@ def admin_save() -> Response:
         )
     except Exception as exc:
         return Response(render_admin_page(error=f"설정 저장 실패: {exc}"), status=400, mimetype="text/html")
+
+
+@app.post("/admin/clear-data")
+def admin_clear_data() -> Response:
+    try:
+        stats = clear_runtime_data()
+        return Response(
+            render_admin_page(
+                message=(
+                    f"서버 데이터를 삭제했습니다. "
+                    f"(결과 {stats['results']}건, 다운로드 {stats['downloads']}건, 작업기록 {stats['jobs']}건)"
+                )
+            ),
+            mimetype="text/html",
+        )
+    except Exception as exc:
+        return Response(render_admin_page(error=f"서버 데이터 삭제 실패: {exc}"), status=400, mimetype="text/html")
 
 
 @app.post("/process")

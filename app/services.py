@@ -115,6 +115,17 @@ def clear_context_cache() -> None:
     _CONTEXT_CACHE.clear()
 
 
+def clear_runtime_data() -> dict[str, int]:
+    with JOB_LOCK:
+        result_count = len(RESULT_DATA_STORE)
+        file_count = len(RESULT_STORE)
+        job_count = len(JOB_STORE)
+        RESULT_DATA_STORE.clear()
+        RESULT_STORE.clear()
+        JOB_STORE.clear()
+    return {"results": result_count, "downloads": file_count, "jobs": job_count}
+
+
 def _safe_int(value, default=0) -> int:
     try:
         if pd.isna(value):
@@ -869,6 +880,7 @@ def process_request(
     if progress_callback:
         progress_callback(stage="학생 파일 읽는 중", current=0, total=0)
     students = load_student_files(files)
+    _prefill_jibun_addresses(students, progress_callback=progress_callback)
     processed = []
     total = len(students)
     for index, student in enumerate(students, start=1):
@@ -892,6 +904,39 @@ def process_request(
     if progress_callback:
         progress_callback(stage="완료", current=total, total=total)
     return result
+
+
+def _prefill_jibun_addresses(students: list[dict[str, Any]], progress_callback=None) -> None:
+    # 같은 도로명 주소가 반복되는 경우 외부 API 호출을 1회로 줄인다.
+    unique_targets: dict[tuple[str, str], None] = {}
+    for student in students:
+        if student.get("source_jibun_address"):
+            continue
+        road_address = clean_text(student.get("road_address", ""))
+        if not road_address:
+            continue
+        postal_code = clean_text(student.get("postal_code", ""))
+        unique_targets[(road_address, postal_code)] = None
+
+    if not unique_targets:
+        return
+
+    conversion_cache: dict[tuple[str, str], str] = {}
+    total_unique = len(unique_targets)
+    for index, (road_address, postal_code) in enumerate(unique_targets.keys(), start=1):
+        converted = get_jibeon_address(road_address, expected_zip=postal_code) or ""
+        conversion_cache[(road_address, postal_code)] = converted
+        if progress_callback:
+            progress_callback(stage="중복 주소 통합 변환 중", current=index, total=total_unique)
+
+    for student in students:
+        if student.get("source_jibun_address"):
+            continue
+        road_address = clean_text(student.get("road_address", ""))
+        postal_code = clean_text(student.get("postal_code", ""))
+        cached = conversion_cache.get((road_address, postal_code), "")
+        if cached:
+            student["source_jibun_address"] = cached
 
 
 def get_download(result_id: str, kind: str) -> bytes | None:
