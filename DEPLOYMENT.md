@@ -1,4 +1,4 @@
-# 배포 안내 (로컬 + Vercel)
+# 배포 안내 (로컬 + Render)
 
 파주시 초등학교 통학구역별 재학생 현황 조사 웹앱 배포 방법입니다.
 
@@ -7,18 +7,17 @@
 - 실행: `python3 webapp.py`
 - 기본 접속: `http://0.0.0.0:8000`
 
-## 2) Vercel 배포 구조
+## 2) Render 배포 구조
 
 이 저장소는 다음 배포형 구조를 사용합니다.
 
-- `api/index.py`: Vercel Python Serverless 진입점
-- `vercel.json`: 모든 요청을 `api/index.py`로 라우팅
-- `.vercelignore`: 배포에 불필요한 로그/산출물/대용량 파일 제외
-- `requirements.txt`: Vercel 빌드 시 Python 의존성 설치
+- `api/index.py`: Render 웹 프로세스 진입점(Flask app)
+- `Procfile`: Render Start Command 정의
+- `requirements.txt`: Python 의존성 설치
 
 ## 3) 환경변수
 
-`.env.example` 기준으로 아래 값을 Vercel Project Environment Variables에 등록합니다.
+`.env.example` 기준으로 아래 값을 Render Environment Variables에 등록합니다.
 
 - `ADDRESS_CONVERT_API_KEY`: 도로명주소 API 키
 - `SUPABASE_URL`: Supabase 프로젝트 URL
@@ -26,18 +25,16 @@
 
 > 현재 앱 핵심 처리(주소 변환/분류/엑셀 생성)는 서버 메모리 기반이며, Supabase 키는 배포 환경 표준화 용도로 먼저 반영했습니다.
 
-## 4) Vercel 배포 명령
+## 4) Render 배포 명령
 
 ```bash
-vercel login
-vercel link
-vercel --prod
+# Render Dashboard에서 GitHub repo 연결 후 자동 배포
+# Start Command: gunicorn api.index:app --bind 0.0.0.0:$PORT
 ```
 
 ## GitHub 업로드 전 정리
 
 - `.gitignore`로 로그/캐시/대용량 엑셀 산출물 제외
-- `.vercelignore`로 Vercel 배포 아카이브에서 불필요 파일 제외
 - 배포에 필요한 코드/템플릿/정적 파일(`app/`, `api/`, `templates/`, `static/`, `data/generated/`)만 유지
 
 ## 5) 설정 관리
@@ -59,4 +56,4 @@ vercel --prod
 ## 7) 운영 시 주의
 
 - 로컬 내부망 운영 시 외부 공개 금지
-- Vercel Serverless 특성상 인스턴스 재시작 시 메모리 데이터는 유지되지 않음
+- Render 인스턴스 재시작 시 메모리 데이터는 유지되지 않음
