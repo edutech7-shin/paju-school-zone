@@ -250,6 +250,8 @@ def _normalize_road_for_jibun_lookup(road_address: str) -> str:
     text = clean_text(road_address)
     if not text:
         return ""
+    # "601동 1903"처럼 동만 있고 호 접미사가 누락된 경우, 호를 자동 보정한다.
+    text = re.sub(r"(\d+동)\s+(\d+)\s*$", r"\1 \2호", text)
     # "509-302호", "612-901호" 같은 동-호 표현은 API 검색 정확도를 떨어뜨려 제거한다.
     text = re.sub(r"\s*\d{3,4}-\d{2,4}호?\s*$", "", text)
     # 쉼표 뒤 상세호수 정보는 우선 제거 후 지번 변환을 시도한다.
@@ -325,9 +327,14 @@ def _tong_or_ri_matches(student_tong: str, candidate_tong: str) -> bool:
         return True
 
     # 범위 파싱이 불가능한 경우를 위한 최소 문자열 포함 비교
+    # 단, 통(通)끼리는 "18통"에 "8통"이 부분문자열로 포함되는 오탐이 있으므로 적용하지 않는다.
     student_compact = compact_text(student_tong)
     candidate_compact = compact_text(candidate_tong)
-    if student_compact and candidate_compact:
+    if (
+        student_compact
+        and candidate_compact
+        and ("리" in student_tong or "리" in candidate_tong)
+    ):
         if student_compact in candidate_compact or candidate_compact in student_compact:
             return True
     return False
@@ -641,7 +648,7 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
         )
         if (
             not requested_report_match.get("row_number")
-            or not requested_report_match.get("status", "").startswith("행정확매칭")
+            or not requested_report_match.get("status", "").startswith("정확한매칭")
         ):
             token_based_match = _match_report_row_by_address_tokens(
                 context=context,
@@ -662,7 +669,7 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
             requested_report_match.get("row_number")
             and requested_school_name
             and requested_school_name != actual_school_name
-            and requested_report_match.get("status", "").startswith("행정확매칭")
+            and requested_report_match.get("status", "").startswith("정확한매칭")
         ):
             report_match = requested_report_match
             actual_school_name = requested_school_name
@@ -678,11 +685,13 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
     school_alignment_status = "일치"
     zone_match_status = school_zone_match.get("zone_status", "학교미분류")
     match_status = report_match.get("status", "미분류")
+    match_reason = report_match.get("reason", "")
 
     if requested_school_name and actual_school_name and requested_school_name != actual_school_name:
         school_alignment_status = "학구불일치"
         zone_match_status = "학구불일치"
         match_status = "학구불일치"
+        match_reason = "요청학교와 판정학교가 다름"
 
     return {
         "grade": student["grade"],
@@ -707,6 +716,7 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
         "zone_match_status": zone_match_status,
         "zone_match_score": school_zone_match.get("zone_score", 0),
         "match_status": match_status,
+        "match_reason": match_reason,
     }
 
 
@@ -758,7 +768,7 @@ def match_report_row(
 
     if len(candidate_rows) == 1:
         row = candidate_rows[0]
-        return {**row, "status": "행정확매칭"}
+        return {**row, "status": "정확한매칭", "reason": "후보가 1개로 확정"}
 
     building_tokens = tokenize_korean_terms(building_name)
     address_compact = compact_text(address_text)
@@ -775,11 +785,11 @@ def match_report_row(
     ranked.sort(key=lambda item: item[0], reverse=True)
     best_rank, best_record = ranked[0]
     if best_rank[0] == 1 or (best_rank[1] + best_rank[2]) >= 2:
-        return {**best_record, "status": "행정확매칭"}
+        return {**best_record, "status": "정확한매칭", "reason": "행정구역/단지 토큰 규칙 일치"}
     if any(best_rank):
-        return {**best_record, "status": "행후보매칭"}
+        return {**best_record, "status": "일부매칭", "reason": "토큰 일부 일치(후보 중 최선)"}
 
-    return {**best_record, "status": "행후보매칭"}
+    return {**best_record, "status": "일부매칭", "reason": "명확 근거 부족, 후보 기본값"}
 
 
 def _match_report_row_by_address_tokens(
@@ -822,7 +832,7 @@ def _match_report_row_by_address_tokens(
     scored.sort(key=lambda item: item[0], reverse=True)
     if scored[0][0] < 90:
         return {}
-    return {**scored[0][1], "status": "행정확매칭(주소토큰)"}
+    return {**scored[0][1], "status": "정확한매칭(주소토큰)", "reason": "요청학교 행의 주소 토큰 직접 일치"}
 
 
 def build_report(processed_students: list[dict[str, Any]], school_name: str = "", base_date: str = "") -> dict[str, Any]:
@@ -912,8 +922,8 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         "total_students": len(processed_students),
         "matched_students": len(processed_students) - len(unmatched),
         "unmatched_students": len(unmatched),
-        "exact_matches": sum(1 for row in processed_students if row["match_status"] == "행정확매칭"),
-        "candidate_matches": sum(1 for row in processed_students if row["match_status"] == "행후보매칭"),
+        "exact_matches": sum(1 for row in processed_students if str(row["match_status"]).startswith("정확한매칭")),
+        "candidate_matches": sum(1 for row in processed_students if row["match_status"] == "일부매칭"),
         "school_mismatches": sum(1 for row in processed_students if row["match_status"] == "학구불일치"),
         "schools": sorted({row["school_name"] for row in table_rows if row["school_name"]}),
     }
