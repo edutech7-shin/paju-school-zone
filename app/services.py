@@ -184,6 +184,34 @@ def _resolve_address_anchor(
     return None
 
 
+def _is_outside_paju_address(road_address: str, jibun_address: str) -> bool:
+    text = clean_text(" ".join(filter(None, [road_address, jibun_address])))
+    if not text:
+        return False
+    compact = compact_text(text)
+    if "경기도파주시" in compact:
+        return False
+    # 시/도 정보가 있는데 파주시가 아닌 경우는 관외로 본다.
+    return bool(
+        re.search(
+            r"(특별시|광역시|특별자치시|특별자치도|경기도|강원도|충청북도|충청남도|전라북도|전라남도|경상북도|경상남도|제주특별자치도)",
+            text,
+        )
+    )
+
+
+def _find_outside_special_row(context: AppContext, school_name: str) -> dict[str, Any]:
+    for record in context.report_template_records:
+        if (
+            record.get("sheet_name") == "재학생 현황(관내)"
+            and record.get("category") == "special"
+            and record.get("admin_area") == "기타(통학구역외)"
+            and (not school_name or record.get("school_name") == school_name)
+        ):
+            return record
+    return {}
+
+
 def _find_column(df: pd.DataFrame, candidates: list[str]) -> str | None:
     normalized = {compact_text(col): col for col in df.columns}
     for candidate in candidates:
@@ -686,11 +714,24 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
     zone_match_status = school_zone_match.get("zone_status", "학교미분류")
     match_status = report_match.get("status", "미분류")
     match_reason = report_match.get("reason", "")
+    outside_paju = _is_outside_paju_address(road_address, jibun_address)
 
-    if requested_school_name and actual_school_name and requested_school_name != actual_school_name:
-        school_alignment_status = "학구불일치"
-        zone_match_status = "학구불일치"
-        match_status = "학구불일치"
+    if outside_paju:
+        special_row = _find_outside_special_row(context, requested_school_name or actual_school_name)
+        if special_row:
+            report_match = {**special_row, "status": "관외(주소확인요망)"}
+            if not actual_school_name:
+                actual_school_name = special_row.get("school_name", "") or requested_school_name
+        else:
+            report_match = {**report_match, "status": "관외(주소확인요망)"}
+        school_alignment_status = "관외(주소확인요망)"
+        zone_match_status = "관외(주소확인요망)"
+        match_status = "관외(주소확인요망)"
+        match_reason = "경기도 파주시 외 주소"
+    elif requested_school_name and actual_school_name and requested_school_name != actual_school_name:
+        school_alignment_status = "관내(학구위반)"
+        zone_match_status = "관내(학구위반)"
+        match_status = "관내(학구위반)"
         match_reason = "요청학교와 판정학교가 다름"
 
     return {
@@ -910,7 +951,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
 
     issue_students = [
         row for row in processed_students
-        if row.get("match_status") in {"학구불일치", "미분류"}
+        if row.get("match_status") in {"관내(학구위반)", "관외(주소확인요망)", "미분류"}
     ]
     issue_df = pd.DataFrame(issue_students)
     issue_output = BytesIO()
@@ -924,7 +965,8 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         "unmatched_students": len(unmatched),
         "exact_matches": sum(1 for row in processed_students if str(row["match_status"]).startswith("정확한매칭")),
         "candidate_matches": sum(1 for row in processed_students if row["match_status"] == "일부매칭"),
-        "school_mismatches": sum(1 for row in processed_students if row["match_status"] == "학구불일치"),
+        "school_mismatches": sum(1 for row in processed_students if row["match_status"] == "관내(학구위반)"),
+        "outside_address_checks": sum(1 for row in processed_students if row["match_status"] == "관외(주소확인요망)"),
         "schools": sorted({row["school_name"] for row in table_rows if row["school_name"]}),
     }
 
@@ -963,7 +1005,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
                 continue
             grade_col = f"{grade}학년"
 
-            if student.get("match_status") in {"학구불일치", "미분류"}:
+            if student.get("match_status") in {"관내(학구위반)", "관외(주소확인요망)", "미분류"}:
                 if special_row:
                     bucket = requested_aggregate[(special_row["sheet_name"], special_row["row_number"])]
                     bucket[grade_col] += 1
