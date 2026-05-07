@@ -28,6 +28,47 @@ body {
   margin: 32px auto 56px;
 }
 
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.site-nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.site-nav__link:hover {
+  color: var(--accent-strong);
+  background: rgba(18, 102, 79, 0.08);
+}
+
+.site-nav__link--active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent-strong);
+}
+
+.site-nav__link--active:hover {
+  color: #fff;
+  background: var(--accent-strong);
+}
+
 .hero,
 .panel,
 .result-card {

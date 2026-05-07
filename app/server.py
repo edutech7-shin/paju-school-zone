@@ -21,14 +21,31 @@ from .services import (
     get_result_data,
     start_cleanup_worker,
     start_job,
+    start_job_address_conversion,
 )
 
 
 INDEX_TEMPLATE = os.path.join(TEMPLATE_DIR, "index.html")
+ADDRESS_CONVERT_TEMPLATE = os.path.join(TEMPLATE_DIR, "address_convert.html")
+ADDRESS_RESULT_TEMPLATE = os.path.join(TEMPLATE_DIR, "address_result.html")
 
 
 def esc(value) -> str:
     return escape("" if value is None else str(value))
+
+
+def site_nav_html(active: str) -> str:
+    """상단 탭: 통학구역 분석 vs 도로명→지번 일괄 변환."""
+    links = (
+        ("/address-convert", "convert", "도로명 주소→지번 주소 일괄 변환"),
+        ("/", "analysis", "통학구역별 재학생 현황 분석"),
+    )
+    parts = ['<nav class="site-nav" aria-label="주요 메뉴">']
+    for href, key, label in links:
+        cls = " site-nav__link--active" if key == active else ""
+        parts.append(f'<a class="site-nav__link{cls}" href="{href}">{esc(label)}</a>')
+    parts.append("</nav>")
+    return "".join(parts)
 
 
 def render_index(result: dict | None = None, error: str = "") -> bytes:
@@ -85,6 +102,8 @@ def render_index(result: dict | None = None, error: str = "") -> bytes:
             <tr>
               <td>{esc(row.get("name", ""))}</td>
               <td>{esc(row.get("grade", ""))}</td>
+              <td>{esc(row.get("homeroom_ban", ""))}</td>
+              <td>{esc(row.get("attendance_no", ""))}</td>
               <td>{esc(row.get("road_address", ""))}</td>
               <td>{esc(row.get("jibun_address", ""))}</td>
               <td>{esc(row.get("admin_area", ""))}</td>
@@ -117,7 +136,7 @@ def render_index(result: dict | None = None, error: str = "") -> bytes:
             <table>
               <thead>
                 <tr>
-                  <th>성명</th><th>학년</th><th>원본 주소</th><th>지번주소</th><th>행정동</th><th>통·리</th><th>학교매칭</th><th>행매칭</th>
+                  <th>성명</th><th>학년</th><th>반</th><th>번호</th><th>원본 주소</th><th>지번주소</th><th>행정동</th><th>통·리</th><th>학교매칭</th><th>행매칭</th>
                 </tr>
               </thead>
               <tbody>{unmatched_html}</tbody>
@@ -131,16 +150,64 @@ def render_index(result: dict | None = None, error: str = "") -> bytes:
         .replace("{{ERROR}}", error_html)
         .replace("{{RESULT}}", result_html)
         .replace("{{SCHOOL_OPTIONS}}", school_options)
+        .replace("{{SITE_NAV}}", site_nav_html("analysis"))
+        .replace("{{RESULT_REDIRECT_BASE}}", "/result")
     )
     return html.encode("utf-8")
 
 
-def render_progress_page(job_id: str) -> bytes:
-    with open(INDEX_TEMPLATE, "r", encoding="utf-8") as file:
+def render_address_convert_page(error: str = "") -> bytes:
+    with open(ADDRESS_CONVERT_TEMPLATE, "r", encoding="utf-8") as file:
         html = file.read()
     config = load_admin_config()
-    schools = sorted({record["school_name"] for record in get_context().school_zone_records})
-    school_options = "".join(f'<option value="{escape(name)}"></option>' for name in schools)
+    error_html = f'<div class="error">{esc(error)}</div>' if error else ""
+    html = (
+        html.replace("{{APP_TITLE}}", esc(config.runtime.app_title))
+        .replace("{{ERROR}}", error_html)
+        .replace("{{RESULT}}", "")
+        .replace("{{SITE_NAV}}", site_nav_html("convert"))
+        .replace("{{RESULT_REDIRECT_BASE}}", "")
+    )
+    return html.encode("utf-8")
+
+
+def render_address_result_page(result: dict[str, object]) -> bytes:
+    with open(ADDRESS_RESULT_TEMPLATE, "r", encoding="utf-8") as file:
+        html = file.read()
+    config = load_admin_config()
+    summary = result.get("summary") or {}
+    total = summary.get("total_students", 0)
+    with_jibun = summary.get("with_jibun", 0)
+    missing = summary.get("missing_jibun", 0)
+    rid = esc(result.get("result_id", ""))
+    html = (
+        html.replace("{{APP_TITLE}}", esc(config.runtime.app_title))
+        .replace("{{SITE_NAV}}", site_nav_html("convert"))
+        .replace("{{TOTAL}}", esc(total))
+        .replace("{{WITH_JIBUN}}", esc(with_jibun))
+        .replace("{{MISSING_JIBUN}}", esc(missing))
+        .replace("{{RESULT_ID}}", rid)
+        .replace("{{RESULT_REDIRECT_BASE}}", "")
+    )
+    return html.encode("utf-8")
+
+
+def render_progress_page(
+    job_id: str,
+    result_redirect_base: str = "/result",
+    active_nav: str = "analysis",
+    shell: str = "analysis",
+) -> bytes:
+    if shell == "address":
+        template_path = ADDRESS_CONVERT_TEMPLATE
+        school_options = ""
+    else:
+        template_path = INDEX_TEMPLATE
+        schools = sorted({record["school_name"] for record in get_context().school_zone_records})
+        school_options = "".join(f'<option value="{escape(name)}"></option>' for name in schools)
+    with open(template_path, "r", encoding="utf-8") as file:
+        html = file.read()
+    config = load_admin_config()
     progress_html = f"""
     <section class="result-card">
       <h2>처리 중</h2>
@@ -155,6 +222,7 @@ def render_progress_page(job_id: str) -> bytes:
     </section>
     <script>
       const jobId = "{job_id}";
+      const resultRedirectBase = "{esc(result_redirect_base)}";
       async function pollJob() {{
         const res = await fetch(`/api/jobs/${{jobId}}`);
         const data = await res.json();
@@ -169,7 +237,7 @@ def render_progress_page(job_id: str) -> bytes:
         document.getElementById("job-count").textContent = `${{current}} / ${{total}}`;
         document.getElementById("job-bar").style.width = `${{percent}}%`;
         if (data.status === "completed" && data.result_id) {{
-          window.location.href = `/result/${{data.result_id}}`;
+          window.location.href = `${{resultRedirectBase}}/${{data.result_id}}`;
           return;
         }}
         if (data.status === "failed") {{
@@ -186,6 +254,8 @@ def render_progress_page(job_id: str) -> bytes:
         .replace("{{ERROR}}", "")
         .replace("{{RESULT}}", progress_html)
         .replace("{{SCHOOL_OPTIONS}}", school_options)
+        .replace("{{SITE_NAV}}", site_nav_html(active_nav))
+        .replace("{{RESULT_REDIRECT_BASE}}", "")
     )
     return html.encode("utf-8")
 
@@ -199,6 +269,19 @@ class AppHandler(BaseHTTPRequestHandler):
                 self._send_html(render_index())
             except Exception as exc:
                 self._send_html(render_index(error=f"초기화 실패: {exc}"), status=500)
+            return
+
+        if parsed.path == "/address-convert":
+            self._send_html(render_address_convert_page())
+            return
+
+        if parsed.path.startswith("/result-address/"):
+            _, _, result_id = parsed.path.split("/", 2)
+            result = get_result_data(result_id)
+            if not result or result.get("mode") != "address_convert":
+                self.send_error(HTTPStatus.NOT_FOUND)
+                return
+            self._send_html(render_address_result_page(result))
             return
 
         if parsed.path.startswith("/static/"):
@@ -220,6 +303,9 @@ class AppHandler(BaseHTTPRequestHandler):
             elif kind == "details":
                 filename = "student-processing-details.xlsx"
                 display_name = "학생_처리내역.xlsx"
+            elif kind == "converted":
+                filename = "jibun-converted.xlsx"
+                display_name = "지번주소_변환결과.xlsx"
             else:
                 filename = "school-zone-issues.xlsx"
                 display_name = "학구불일치_미분류_명단.xlsx"
@@ -239,6 +325,9 @@ class AppHandler(BaseHTTPRequestHandler):
             result = get_result_data(result_id)
             if not result:
                 self.send_error(HTTPStatus.NOT_FOUND)
+                return
+            if result.get("mode") == "address_convert":
+                self._send_html(render_address_result_page(result))
                 return
             self._send_html(render_index(result=result))
             return
@@ -261,6 +350,43 @@ class AppHandler(BaseHTTPRequestHandler):
                 status=500,
             )
             return
+        if self.path == "/process-address-convert":
+            form = cgi.FieldStorage(
+                fp=self.rfile,
+                headers=self.headers,
+                environ={
+                    "REQUEST_METHOD": "POST",
+                    "CONTENT_TYPE": self.headers.get("Content-Type", ""),
+                },
+            )
+            files = []
+            if "files" in form:
+                field = form["files"]
+                if isinstance(field, list):
+                    for item in field:
+                        files.append((item.filename or "students.xlsx", item.file.read()))
+                else:
+                    files.append((field.filename or "students.xlsx", field.file.read()))
+
+            if not files:
+                self._send_html(render_address_convert_page(error="학생 명렬표 엑셀 파일을 하나 이상 올려주세요."), status=400)
+                return
+
+            try:
+                job_id = start_job_address_conversion(files)
+                self._send_html(
+                    render_progress_page(
+                        job_id,
+                        result_redirect_base="/result-address",
+                        active_nav="convert",
+                        shell="address",
+                    )
+                )
+            except Exception as exc:
+                traceback.print_exc()
+                self._send_html(render_address_convert_page(error=str(exc)), status=400)
+            return
+
         if self.path != "/process":
             self.send_error(HTTPStatus.NOT_FOUND)
             return

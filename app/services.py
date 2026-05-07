@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime
 from io import BytesIO
+import math
+import numbers
 import os
 import re
 import threading
@@ -221,12 +223,35 @@ def _find_column(df: pd.DataFrame, candidates: list[str]) -> str | None:
     return None
 
 
+def _excel_cell_display(value: object) -> str:
+    """엑셀 셀 값을 명렬표에 적힌 것처럼 문자열로 유지한다(반·번호 등)."""
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except TypeError:
+        pass
+    if isinstance(value, bool):
+        return clean_text(str(value))
+    if isinstance(value, numbers.Integral):
+        return str(int(value))
+    if isinstance(value, float):
+        if math.isnan(value):
+            return ""
+        if value.is_integer():
+            return str(int(value))
+    return clean_text(str(value))
+
+
 def _extract_student_rows(df: pd.DataFrame, fallback_grade: int | None = None) -> list[dict[str, Any]]:
     grade_col = _find_column(df, ["학년"])
     name_col = _find_column(df, ["성명", "이름", "학생명"])
     zip_col = _find_column(df, ["우편번호", "우편 번호", "zip", "zipcode"])
     address_col = _find_column(df, ["주소", "도로명주소", "주소지"])
     jibun_col = _find_column(df, ["지번주소"])
+    homeroom_col = _find_column(df, ["반", "학급"])
+    number_col = _find_column(df, ["번호", "학생번호", "출석번호", "no"])
 
     if address_col is None and jibun_col is None:
         raise ValueError("학생 파일에 '주소' 또는 '지번주소' 컬럼이 필요합니다.")
@@ -238,6 +263,8 @@ def _extract_student_rows(df: pd.DataFrame, fallback_grade: int | None = None) -
         postal_code = clean_text(raw.get(zip_col) if zip_col else "")
         road_address = clean_text(raw.get(address_col) if address_col else "")
         jibun_address = clean_text(raw.get(jibun_col) if jibun_col else "")
+        homeroom_ban = _excel_cell_display(raw.get(homeroom_col)) if homeroom_col else ""
+        attendance_no = _excel_cell_display(raw.get(number_col)) if number_col else ""
 
         if not road_address and not jibun_address:
             continue
@@ -249,6 +276,8 @@ def _extract_student_rows(df: pd.DataFrame, fallback_grade: int | None = None) -
                 "postal_code": postal_code,
                 "road_address": road_address,
                 "source_jibun_address": jibun_address,
+                "homeroom_ban": homeroom_ban,
+                "attendance_no": attendance_no,
             }
         )
     return rows
@@ -736,6 +765,8 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
 
     return {
         "grade": student["grade"],
+        "homeroom_ban": clean_text(student.get("homeroom_ban", "")),
+        "attendance_no": clean_text(student.get("attendance_no", "")),
         "name": student["name"],
         "input_type": "jibun" if is_jibun else "road",
         "requested_school_name": requested_school_name,
@@ -954,6 +985,18 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         if row.get("match_status") in {"관내(학구위반)", "관외(주소확인요망)", "미분류"}
     ]
     issue_df = pd.DataFrame(issue_students)
+    if not issue_df.empty:
+        issue_rename = {
+            "grade": "학년",
+            "homeroom_ban": "반",
+            "attendance_no": "번호",
+            "name": "성명",
+        }
+        issue_df = issue_df.rename(columns={k: v for k, v in issue_rename.items() if k in issue_df.columns})
+        issue_front = ["학년", "반", "번호", "성명"]
+        issue_ordered = [c for c in issue_front if c in issue_df.columns]
+        issue_ordered.extend([c for c in issue_df.columns if c not in issue_ordered])
+        issue_df = issue_df[issue_ordered]
     issue_output = BytesIO()
     with pd.ExcelWriter(issue_output, engine="openpyxl") as writer:
         issue_df.to_excel(writer, sheet_name="issues", index=False)
@@ -1135,6 +1178,59 @@ def _set_job_state(job_id: str, **updates) -> None:
             JOB_STORE[job_id].update(updates)
 
 
+def build_jibun_export_workbook(students: list[dict[str, Any]]) -> bytes:
+    """도로명→지번 변환 결과만 담은 엑셀 바이너리를 만든다."""
+    rows: list[dict[str, Any]] = []
+    for student in students:
+        rows.append(
+            {
+                "학년": student.get("grade", ""),
+                "성명": student.get("name", ""),
+                "우편번호": clean_text(student.get("postal_code", "")),
+                "도로명주소": clean_text(student.get("road_address", "")),
+                "지번주소": clean_text(student.get("source_jibun_address", "")),
+            }
+        )
+    buffer = BytesIO()
+    pd.DataFrame(rows).to_excel(buffer, sheet_name="지번변환", index=False)
+    buffer.seek(0)
+    return buffer.getvalue()
+
+
+def process_address_conversion_request(
+    files: list[tuple[str, bytes]],
+    progress_callback=None,
+) -> dict[str, Any]:
+    """
+    통학구역 매칭 없이 명렬표의 도로명 주소만 행정안전부 API로 지번 주소로 채운다.
+    """
+    if progress_callback:
+        progress_callback(stage="학생 파일 읽는 중", current=0, total=0)
+    students = load_student_files(files)
+    _prefill_jibun_addresses(students, progress_callback=progress_callback)
+    if progress_callback:
+        progress_callback(stage="엑셀 생성 중", current=len(students), total=len(students))
+    workbook_bytes = build_jibun_export_workbook(students)
+    result_id = uuid4().hex
+    created_at = _now_ts()
+    with_jibun = sum(1 for row in students if clean_text(row.get("source_jibun_address", "")))
+    summary = {
+        "total_students": len(students),
+        "with_jibun": with_jibun,
+        "missing_jibun": len(students) - with_jibun,
+    }
+    RESULT_STORE[result_id] = {"converted": workbook_bytes}
+    RESULT_DATA_STORE[result_id] = {
+        "created_at": created_at,
+        "mode": "address_convert",
+        "summary": summary,
+        "result_id": result_id,
+    }
+    if progress_callback:
+        progress_callback(stage="완료", current=len(students), total=len(students))
+    return RESULT_DATA_STORE[result_id]
+
+
 def process_request(
     files: list[tuple[str, bytes]],
     school_name: str = "",
@@ -1259,6 +1355,48 @@ def start_job(files: list[tuple[str, bytes]], school_name: str = "", base_date: 
             _set_job_state(job_id, status="failed", stage="실패", error=str(exc))
 
     thread = threading.Thread(target=worker, name=f"job-{job_id[:8]}", daemon=True)
+    thread.start()
+    return job_id
+
+
+def start_job_address_conversion(files: list[tuple[str, bytes]]) -> str:
+    job_id = uuid4().hex
+    created_at = _now_ts()
+    with JOB_LOCK:
+        JOB_STORE[job_id] = {
+            "created_at": created_at,
+            "status": "queued",
+            "stage": "대기 중",
+            "current": 0,
+            "total": 0,
+            "error": "",
+            "result_id": "",
+        }
+
+    def progress_callback(stage: str, current: int, total: int) -> None:
+        _set_job_state(
+            job_id,
+            status="running" if stage != "완료" else "completed",
+            stage=stage,
+            current=current,
+            total=total,
+        )
+
+    def worker() -> None:
+        try:
+            result = process_address_conversion_request(files, progress_callback=progress_callback)
+            _set_job_state(
+                job_id,
+                status="completed",
+                stage="완료",
+                current=JOB_STORE[job_id]["current"],
+                total=JOB_STORE[job_id]["total"],
+                result_id=result["result_id"],
+            )
+        except Exception as exc:
+            _set_job_state(job_id, status="failed", stage="실패", error=str(exc))
+
+    thread = threading.Thread(target=worker, name=f"addr-job-{job_id[:8]}", daemon=True)
     thread.start()
     return job_id
 

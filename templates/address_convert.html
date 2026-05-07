@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{APP_TITLE}}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      {{SITE_NAV}}
+
+      <section class="hero">
+        <p class="eyebrow">와석초 업무효율화 연구학교</p>
+        <h1>도로명 주소→지번 주소 일괄 변환</h1>
+        <p class="lede">
+          나이스 학생 명렬표 엑셀을 올리면 도로명 주소를 행정안전부 도로명주소 API로 조회하여 지번 주소 열을 채운 뒤, 새 엑셀 파일로 내려받을 수 있습니다. 통학구역 매칭은 수행하지 않습니다.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>명렬표 업로드</h2>
+
+        <form method="post" action="/process-address-convert" enctype="multipart/form-data" class="stack">
+          <label for="files">학생 명렬표 엑셀 (.xlsx)</label>
+          <input id="files" type="file" name="files" accept=".xlsx" multiple required>
+          <p class="hint compact">
+          <ol class="guide-list">
+            <li>나이스 명렬표에서 우편번호·주소(도로명) 컬럼을 포함해 엑셀로 저장합니다.</li>
+            <li>파일에 이미 지번주소가 있으면 그대로 두고, 도로명만 있는 행만 API로 변환합니다.</li>
+            <li>여러 학년 파일을 한 번에 선택할 수 있습니다.</li>
+          </ol>
+          </p>
+          <div id="selected-files" class="selected-files">선택된 파일 없음</div>
+
+          <button type="submit" class="primary-submit">지번 주소 변환 실행</button>
+        </form>
+      </section>
+
+      {{ERROR}}
+      {{RESULT}}
+    </main>
+    <script>
+      const input = document.getElementById("files");
+      const output = document.getElementById("selected-files");
+
+      input.addEventListener("change", () => {
+        const files = Array.from(input.files || []);
+        if (!files.length) {
+          output.textContent = "선택된 파일 없음";
+          return;
+        }
+        output.innerHTML = files
+          .map((file) => `<span>${file.name}</span>`)
+          .join("");
+      });
+    </script>
+  </body>
+</html>

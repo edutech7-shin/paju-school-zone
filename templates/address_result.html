@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{APP_TITLE}}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      {{SITE_NAV}}
+
+      <section class="hero">
+        <p class="eyebrow">와석초 업무효율화 연구학교</p>
+        <h1>지번 주소 변환 완료</h1>
+        <p class="lede">
+          아래 버튼으로 결과 엑셀을 저장할 수 있습니다. 지번이 비어 있는 행은 도로명 매칭에 실패한 경우이니 출처를 확인해 주세요.
+        </p>
+      </section>
+
+      <section class="result-card">
+        <h2>요약</h2>
+        <div class="summary-grid">
+          <div><strong>{{TOTAL}}</strong><span>전체 행</span></div>
+          <div><strong>{{WITH_JIBUN}}</strong><span>지번 주소 있음</span></div>
+          <div><strong>{{MISSING_JIBUN}}</strong><span>지번 미확보</span></div>
+        </div>
+        <div class="download-row">
+          <a class="button-link" href="/download/{{RESULT_ID}}/converted">지번 변환 엑셀 다운로드</a>
+          <a class="button-link secondary" href="/address-convert">다시 변환하기</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

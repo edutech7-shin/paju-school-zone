@@ -5,13 +5,19 @@ from urllib.parse import quote
 from flask import Flask, Response, jsonify, request
 
 from app.datasets import ensure_datasets
-from app.server import render_index, render_progress_page
+from app.server import (
+    render_address_convert_page,
+    render_address_result_page,
+    render_index,
+    render_progress_page,
+)
 from app.services import (
     get_download,
     get_job,
     get_result_data,
     start_cleanup_worker,
     start_job,
+    start_job_address_conversion,
 )
 
 
@@ -26,6 +32,49 @@ def index() -> Response:
         return Response(render_index(), mimetype="text/html")
     except Exception as exc:  # pragma: no cover - runtime safe fallback
         return Response(render_index(error=f"초기화 실패: {exc}"), status=500, mimetype="text/html")
+
+
+@app.get("/address-convert")
+def address_convert() -> Response:
+    return Response(render_address_convert_page(), mimetype="text/html")
+
+
+@app.post("/process-address-convert")
+def process_address_convert() -> Response:
+    files = []
+    for item in request.files.getlist("files"):
+        if not item:
+            continue
+        files.append((item.filename or "students.xlsx", item.read()))
+
+    if not files:
+        return Response(
+            render_address_convert_page(error="학생 명렬표 엑셀 파일을 하나 이상 올려주세요."),
+            status=400,
+            mimetype="text/html",
+        )
+
+    try:
+        job_id = start_job_address_conversion(files)
+        return Response(
+            render_progress_page(
+                job_id,
+                result_redirect_base="/result-address",
+                active_nav="convert",
+                shell="address",
+            ),
+            mimetype="text/html",
+        )
+    except Exception as exc:
+        return Response(render_address_convert_page(error=str(exc)), status=400, mimetype="text/html")
+
+
+@app.get("/result-address/<result_id>")
+def address_result_page(result_id: str) -> Response:
+    result = get_result_data(result_id)
+    if not result or result.get("mode") != "address_convert":
+        return Response("Not Found", status=404)
+    return Response(render_address_result_page(result), mimetype="text/html")
 
 
 @app.post("/process")
@@ -53,6 +102,8 @@ def result_page(result_id: str) -> Response:
     result = get_result_data(result_id)
     if not result:
         return Response("Not Found", status=404)
+    if result.get("mode") == "address_convert":
+        return Response(render_address_result_page(result), mimetype="text/html")
     return Response(render_index(result=result), mimetype="text/html")
 
 
@@ -71,6 +122,9 @@ def download(result_id: str, kind: str):
     elif kind == "details":
         filename = "student-processing-details.xlsx"
         display_name = "학생_처리내역.xlsx"
+    elif kind == "converted":
+        filename = "jibun-converted.xlsx"
+        display_name = "지번주소_변환결과.xlsx"
     else:
         filename = "school-zone-issues.xlsx"
         display_name = "학구불일치_미분류_명단.xlsx"
