@@ -44,6 +44,17 @@ class AppContext:
 _CONTEXT_CACHE: dict[tuple[str, str, str, str], AppContext] = {}
 _CLEANUP_THREAD_STARTED = False
 
+ADDRESS_ANCHORS: list[dict[str, str]] = [
+    {
+        "id": "yadang-1015-hanbit4",
+        "contains": "야당동1015",
+        "contains_any": "롯데캐슬파크타운2차|롯데캐슬파크타운ii|롯데캐슬파크타운ⅱ|롯데캐슬파크타운Ⅱ|한빛마을4단지",
+        "admin_area": "운정3동",
+        "tong_ri": "31통",
+        "school_name": "와석초",
+    },
+]
+
 
 def get_context() -> AppContext:
     config = load_admin_config()
@@ -148,6 +159,29 @@ def _format_base_date(base_date: str) -> str:
         return f"{parsed.year}. {parsed.month}. {parsed.day}."
     except ValueError:
         return text
+
+
+def _resolve_address_anchor(
+    road_address: str,
+    jibun_address: str,
+    building_name: str,
+    requested_school_name: str = "",
+) -> dict[str, str] | None:
+    joined = compact_text(" ".join(filter(None, [road_address, jibun_address, building_name])))
+    if not joined:
+        return None
+    for rule in ADDRESS_ANCHORS:
+        must = compact_text(rule.get("contains", ""))
+        if must and must not in joined:
+            continue
+        any_tokens = [compact_text(token) for token in clean_text(rule.get("contains_any", "")).split("|") if token]
+        if any_tokens and not any(token in joined for token in any_tokens):
+            continue
+        anchor_school = clean_text(rule.get("school_name", ""))
+        if requested_school_name and anchor_school and requested_school_name != anchor_school:
+            continue
+        return rule
+    return None
 
 
 def _find_column(df: pd.DataFrame, candidates: list[str]) -> str | None:
@@ -529,11 +563,23 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
 
     match_text = jibun_address or road_address
     building_name = extract_building_name(match_text)
-    admin_area, tong_ri, ban, admin_record = _admin_lookup_from_dataset(match_text, building_name, context)
-    if (not admin_area or not tong_ri) and jibun_address:
-        fallback_dong, fallback_tong = _fallback_admin_lookup(jibun_address, context)
-        admin_area = admin_area or fallback_dong
-        tong_ri = tong_ri or fallback_tong
+    anchor_rule = _resolve_address_anchor(
+        road_address=road_address,
+        jibun_address=jibun_address,
+        building_name=building_name or "",
+        requested_school_name=requested_school_name,
+    )
+    if anchor_rule:
+        admin_area = clean_text(anchor_rule.get("admin_area", ""))
+        tong_ri = clean_text(anchor_rule.get("tong_ri", ""))
+        ban = ""
+        admin_record = None
+    else:
+        admin_area, tong_ri, ban, admin_record = _admin_lookup_from_dataset(match_text, building_name, context)
+        if (not admin_area or not tong_ri) and jibun_address:
+            fallback_dong, fallback_tong = _fallback_admin_lookup(jibun_address, context)
+            admin_area = admin_area or fallback_dong
+            tong_ri = tong_ri or fallback_tong
 
     school_zone_match = choose_school_and_zone(
         context=context,
@@ -555,6 +601,20 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
         admin_building_names=admin_record.get("building_names", []) if admin_record else [],
     )
     actual_school_name = report_match.get("school_name", "") or resolved_school_name
+    if anchor_rule and anchor_rule.get("school_name"):
+        anchor_school = clean_text(anchor_rule["school_name"])
+        forced_report_match = match_report_row(
+            context=context,
+            admin_area=admin_area,
+            tong_ri=tong_ri,
+            building_name=building_name,
+            address_text=" ".join(filter(None, [road_address, jibun_address])),
+            school_name=anchor_school,
+            admin_building_names=admin_record.get("building_names", []) if admin_record else [],
+        )
+        if forced_report_match.get("row_number"):
+            report_match = forced_report_match
+        actual_school_name = anchor_school
     if actual_school_name:
         refined_report_match = match_report_row(
             context=context,
