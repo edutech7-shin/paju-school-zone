@@ -26,6 +26,30 @@ def extract_building_name(address):
     if pd.isna(address):
         return None
     address_str = str(address)
+    compact_address = re.sub(r"\s+", "", address_str)
+
+    # 단지명이 포함된 복합 건물명을 우선 추출해 지나친 축약(예: 롯데캐슬, 4단지)을 방지한다.
+    prioritized_patterns = [
+        r"(해솔마을\s*\d+단지\s*[가-힣A-Za-z0-9]*)",
+        r"(가람마을\s*\d+단지\s*[가-힣A-Za-z0-9]*)",
+        r"(산내마을\s*\d+단지\s*[가-힣A-Za-z0-9]*)",
+        r"(운정신도시\s*라피아노\s*\d+단지)",
+        r"(라피아노\s*\d+단지)",
+    ]
+    for pattern in prioritized_patterns:
+        match = re.search(pattern, address_str)
+        if match:
+            candidate = re.sub(r"\s+", "", match.group(1))
+            if candidate:
+                return candidate
+
+    # 괄호 안 주소 보조정보에서 단지명/브랜드명을 우선 확인한다.
+    parenthetical_contents = re.findall(r"\(([^)]+)\)", address_str)
+    for content in parenthetical_contents:
+        for part in content.split(","):
+            token = part.strip()
+            if re.search(r"(해솔마을\s*\d+단지|가람마을\s*\d+단지|산내마을\s*\d+단지|라피아노\s*\d+단지)", token):
+                return re.sub(r"\s+", "", token)
     
     # 도로명이 포함된 주소에서 건물명 추출
     # 패턴: 도로명+번호 다음에 오는 괄호 안의 내용 (야당동,건물명)

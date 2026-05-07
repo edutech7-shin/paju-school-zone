@@ -83,6 +83,14 @@ def parse_address_unit_info(text: str) -> dict:
     normalized = normalize_range_symbols(clean_text(text))
     block_numbers = [match.group(1) for match in re.finditer(r"(\d+)동", normalized)]
     unit_numbers = [int(match.group(1)) for match in re.finditer(r"(\d+)호", normalized)]
+    # "509-302호"처럼 동/호를 하이픈으로 표기한 형식을 보완 인식한다.
+    for match in re.finditer(r"\b(\d{3,4})-(\d{2,4})호\b", normalized):
+        block = match.group(1)
+        unit = int(match.group(2))
+        if block not in block_numbers:
+            block_numbers.append(block)
+        if unit not in unit_numbers:
+            unit_numbers.append(unit)
     return {
         "block_numbers": block_numbers,
         "unit_numbers": unit_numbers,

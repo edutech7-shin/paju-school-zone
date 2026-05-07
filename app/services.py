@@ -212,6 +212,17 @@ def _extract_tong_number(text: str) -> str:
     return match.group(1) if match else ""
 
 
+def _normalize_road_for_jibun_lookup(road_address: str) -> str:
+    text = clean_text(road_address)
+    if not text:
+        return ""
+    # "509-302호", "612-901호" 같은 동-호 표현은 API 검색 정확도를 떨어뜨려 제거한다.
+    text = re.sub(r"\s*\d{3,4}-\d{2,4}호?\s*$", "", text)
+    # 쉼표 뒤 상세호수 정보는 우선 제거 후 지번 변환을 시도한다.
+    text = re.sub(r"\s*,\s*\d+동\s*\d+호\s*$", "", text)
+    return text.strip()
+
+
 def _extract_tong_numbers(text: str) -> set[int]:
     numbers: set[int] = set()
     for start_text, end_text in re.findall(r"(\d+)(?:~(\d+))?통", clean_text(text)):
@@ -249,42 +260,32 @@ def _is_joint_zone_pair(requested_row: dict[str, Any], actual_row: dict[str, Any
     return actual_school_name in requested_note_schools or requested_school_name in actual_note_schools
 
 
-def _score_school_zone_record(
+def _rule_zone_rank(
     record: dict[str, Any],
     admin_area: str,
     tong_ri: str,
     building_name: str,
     address_text: str,
-) -> int:
-    score = 0
+) -> tuple[int, int, int, int, int, int]:
     address_compact = compact_text(address_text)
     building_tokens = tokenize_korean_terms(building_name)
     tong_number = _extract_tong_number(tong_ri)
     zone_text = record["zone_text"]
-
-    if admin_area and record["admin_area"] == admin_area:
-        score += 60
-
-    if tong_number:
-        if _tong_matches(tong_ri, zone_text):
-            score += 70
-
-    if tong_ri and compact_text(tong_ri) in record["tong_key"]:
-        score += 35
-
     zone_compact = compact_text(zone_text)
-    for token in building_tokens:
-        if token and token in zone_compact:
-            score += 30
-
-    for token in record.get("zone_tokens", []):
-        if token and token in address_compact:
-            score += 12
-
-    if zone_compact and zone_compact in address_compact:
-        score += 80
-
-    return score
+    zone_token_matches = sum(1 for token in record.get("zone_tokens", []) if token and token in address_compact)
+    building_token_matches = sum(1 for token in building_tokens if token and token in zone_compact)
+    has_admin_match = int(bool(admin_area and record["admin_area"] == admin_area))
+    has_tong_match = int(bool(tong_number and _tong_matches(tong_ri, zone_text)))
+    has_tong_text_match = int(bool(tong_ri and compact_text(tong_ri) in record["tong_key"]))
+    has_zone_text_in_address = int(bool(zone_compact and zone_compact in address_compact))
+    return (
+        has_admin_match,
+        has_tong_match,
+        has_zone_text_in_address,
+        building_token_matches,
+        zone_token_matches,
+        -record.get("row_number", 0),
+    )
 
 
 def choose_school_and_zone(
@@ -299,30 +300,32 @@ def choose_school_and_zone(
     if school_name:
         candidates = [record for record in candidates if record["school_name"] == school_name]
 
-    scored = []
+    ranked = []
     for record in candidates:
-        score = _score_school_zone_record(record, admin_area, tong_ri, building_name, address_text)
-        if score > 0:
-            scored.append((score, record))
+        rank = _rule_zone_rank(record, admin_area, tong_ri, building_name, address_text)
+        if rank[:5] != (0, 0, 0, 0, 0):
+            ranked.append((rank, record))
 
     fallback_status = ""
-    if not scored and school_name:
+    if not ranked and school_name:
         fallback_status = "학교명불일치후재탐색"
         for record in context.school_zone_records:
-            score = _score_school_zone_record(record, admin_area, tong_ri, building_name, address_text)
-            if score > 0:
-                scored.append((score, record))
+            rank = _rule_zone_rank(record, admin_area, tong_ri, building_name, address_text)
+            if rank[:5] != (0, 0, 0, 0, 0):
+                ranked.append((rank, record))
 
-    if not scored:
+    if not ranked:
         return {"school_name": school_name, "zone_status": "학교미분류"}
 
-    scored.sort(key=lambda item: item[0], reverse=True)
-    best_score, best = scored[0]
+    ranked.sort(key=lambda item: item[0], reverse=True)
+    best_rank, best = ranked[0]
     if fallback_status:
         status = fallback_status
     else:
-        status = "학교매칭" if best_score >= 100 else "학교후보"
-    return {**best, "zone_status": status, "zone_score": best_score}
+        # 핵심 조건(행정동, 통, 단지 키워드) 2개 이상이면 매칭으로 본다.
+        strong_hits = sum(best_rank[:3])
+        status = "학교매칭" if strong_hits >= 2 else "학교후보"
+    return {**best, "zone_status": status, "zone_score": sum(best_rank[:5])}
 
 
 def _admin_lookup_from_dataset(address_text: str, building_name: str, context: AppContext) -> tuple[str, str, str, dict[str, Any] | None]:
@@ -348,33 +351,51 @@ def _admin_lookup_from_dataset(address_text: str, building_name: str, context: A
                 record = parcel_candidates[0]
                 return record["admin_area"], record["tong_ri"], record["ban"], record
 
-            def score_candidate(record: dict[str, Any]) -> tuple[int, int]:
+            def rank_candidate(record: dict[str, Any]) -> tuple[int, int, int, int, int, int]:
                 candidate_tokens = tokenize_korean_terms(" ".join(record.get("building_names", [])))
-                score = 0
-                for token in building_tokens + address_tokens:
-                    if token and any(token in candidate for candidate in candidate_tokens):
-                        score += 100
-                if building_name and any_contains(" ".join(record.get("building_names", [])), [building_name]):
-                    score += 140
-                if record.get("building_name") and compact_text(record["building_name"]) in normalized:
-                    score += 80
+                def is_meaningful_token(token: str) -> bool:
+                    if not token:
+                        return False
+                    compact = compact_text(token)
+                    if len(compact) < 3:
+                        return False
+                    if re.fullmatch(r"\d+(?:동|호|통|반|단지)?", compact):
+                        return False
+                    if compact in {"아파트", "단지", "마을", "빌라", "동", "호"}:
+                        return False
+                    return True
+                token_hits = sum(
+                    1
+                    for token in building_tokens + address_tokens
+                    if is_meaningful_token(token) and any(token in candidate for candidate in candidate_tokens)
+                )
+                has_building_exact = int(bool(building_name and any_contains(" ".join(record.get("building_names", [])), [building_name])))
+                has_jurisdiction_text = int(bool(record.get("building_name") and compact_text(record["building_name"]) in normalized))
                 record_blocks = [clean_text(value) for value in record.get("block_numbers", [])]
+                has_block_match = 0
+                has_block_conflict = 0
                 if address_block_numbers and record_blocks:
                     if any(block in record_blocks for block in address_block_numbers):
-                        score += 160
+                        has_block_match = 1
                     else:
-                        score -= 80
+                        has_block_conflict = 1
+                has_unit_match = 0
                 if address_unit_numbers and record.get("unit_ranges"):
-                    unit_score = 0
                     for unit_number in address_unit_numbers:
                         if unit_in_ranges(unit_number, record.get("unit_ranges", []), address_block_numbers[0] if address_block_numbers else ""):
-                            unit_score = max(unit_score, 120)
-                    score += unit_score
-                if record["jurisdiction"] and compact_text(record["jurisdiction"]) in normalized:
-                    score += 30
-                return score, -record["row_number"]
+                            has_unit_match = 1
+                            break
+                has_jurisdiction_full_match = int(bool(record["jurisdiction"] and compact_text(record["jurisdiction"]) in normalized))
+                return (
+                    has_building_exact,
+                    has_block_match,
+                    has_unit_match,
+                    has_jurisdiction_full_match,
+                    token_hits - has_block_conflict,
+                    -record["row_number"],
+                )
 
-            best = max(parcel_candidates, key=score_candidate)
+            best = max(parcel_candidates, key=rank_candidate)
             record = best
             return record["admin_area"], record["tong_ri"], record["ban"], record
 
@@ -433,7 +454,8 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
 
     jibun_address = source_jibun
     if not jibun_address and road_address:
-        jibun_address = get_jibeon_address(road_address, expected_zip=postal_code)
+        normalized_road = _normalize_road_for_jibun_lookup(road_address)
+        jibun_address = get_jibeon_address(normalized_road or road_address, expected_zip=postal_code)
 
     match_text = jibun_address or road_address
     building_name = extract_building_name(match_text)
@@ -488,10 +510,29 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
             admin_building_names=admin_record.get("building_names", []) if admin_record else [],
         )
         if (
+            not requested_report_match.get("row_number")
+            or not requested_report_match.get("status", "").startswith("행정확매칭")
+        ):
+            token_based_match = _match_report_row_by_address_tokens(
+                context=context,
+                requested_school_name=requested_school_name,
+                address_text=" ".join(filter(None, [road_address, jibun_address])),
+            )
+            if token_based_match.get("row_number"):
+                requested_report_match = token_based_match
+        if (
             requested_school_name
             and actual_school_name
             and requested_school_name != actual_school_name
             and _is_joint_zone_pair(requested_report_match, report_match, requested_school_name, actual_school_name)
+        ):
+            report_match = requested_report_match
+            actual_school_name = requested_school_name
+        elif (
+            requested_report_match.get("row_number")
+            and requested_school_name
+            and requested_school_name != actual_school_name
+            and requested_report_match.get("status", "").startswith("행정확매칭")
         ):
             report_match = requested_report_match
             actual_school_name = requested_school_name
@@ -583,33 +624,67 @@ def match_report_row(
 
     building_tokens = tokenize_korean_terms(building_name)
     address_compact = compact_text(address_text)
-    scored = []
+    ranked: list[tuple[tuple[int, int, int, int], dict[str, Any]]] = []
     for record in candidate_rows:
+        extra_compact = compact_text(record.get("extra_area", ""))
+        token_hit_count = sum(1 for token in record.get("extra_tokens", []) if token and token in address_compact)
+        building_hit_count = sum(1 for token in building_tokens if token and token in extra_compact)
+        has_extra_full_match = int(bool(extra_compact and extra_compact in address_compact))
+        has_tong_text_match = int(bool(record["tong_ri"] and compact_text(record["tong_ri"]) in address_compact))
+        rank = (has_extra_full_match, building_hit_count, token_hit_count, has_tong_text_match)
+        ranked.append((rank, record))
+
+    ranked.sort(key=lambda item: item[0], reverse=True)
+    best_rank, best_record = ranked[0]
+    if best_rank[0] == 1 or (best_rank[1] + best_rank[2]) >= 2:
+        return {**best_record, "status": "행정확매칭"}
+    if any(best_rank):
+        return {**best_record, "status": "행후보매칭"}
+
+    return {**best_record, "status": "행후보매칭"}
+
+
+def _match_report_row_by_address_tokens(
+    context: AppContext,
+    requested_school_name: str,
+    address_text: str,
+) -> dict[str, Any]:
+    if not requested_school_name:
+        return {}
+    address_compact = compact_text(address_text)
+    if not address_compact:
+        return {}
+
+    candidate_rows = [
+        record
+        for record in context.report_template_records
+        if record["sheet_name"] == "재학생 현황(관내)"
+        and record["category"] == "normal"
+        and record["school_name"] == requested_school_name
+        and record.get("extra_area")
+    ]
+    if not candidate_rows:
+        return {}
+
+    scored: list[tuple[int, dict[str, Any]]] = []
+    for row in candidate_rows:
         score = 0
-        if record["extra_area"]:
-            extra_compact = compact_text(record["extra_area"])
-            if extra_compact and extra_compact in address_compact:
-                score += 50
-            for token in building_tokens:
-                if token and token in extra_compact:
-                    score += 20
-            for token in record["extra_tokens"]:
-                if token and token in address_compact:
-                    score += 10
-        if record["tong_ri"] and compact_text(record["tong_ri"]) in address_compact:
-            score += 15
-        if admin_area and record["admin_area"] == admin_area:
-            score += 10
-        scored.append((score, record))
+        extra_compact = compact_text(row.get("extra_area", ""))
+        if extra_compact and extra_compact in address_compact:
+            score += 120
+        for token in row.get("extra_tokens", []):
+            token_compact = compact_text(token)
+            if token_compact and token_compact in address_compact:
+                score += 45
+        if score > 0:
+            scored.append((score, row))
 
+    if not scored:
+        return {}
     scored.sort(key=lambda item: item[0], reverse=True)
-    if scored and scored[0][0] >= 40:
-        return {**scored[0][1], "status": "행정확매칭"}
-    if scored and scored[0][0] > 0:
-        return {**scored[0][1], "status": "행후보매칭"}
-
-    fallback = candidate_rows[0]
-    return {**fallback, "status": "행후보매칭"}
+    if scored[0][0] < 90:
+        return {}
+    return {**scored[0][1], "status": "행정확매칭(주소토큰)"}
 
 
 def build_report(processed_students: list[dict[str, Any]], school_name: str = "", base_date: str = "") -> dict[str, Any]:
@@ -924,7 +999,8 @@ def _prefill_jibun_addresses(students: list[dict[str, Any]], progress_callback=N
     conversion_cache: dict[tuple[str, str], str] = {}
     total_unique = len(unique_targets)
     for index, (road_address, postal_code) in enumerate(unique_targets.keys(), start=1):
-        converted = get_jibeon_address(road_address, expected_zip=postal_code) or ""
+        normalized_road = _normalize_road_for_jibun_lookup(road_address)
+        converted = get_jibeon_address(normalized_road or road_address, expected_zip=postal_code) or ""
         conversion_cache[(road_address, postal_code)] = converted
         if progress_callback:
             progress_callback(stage="중복 주소 통합 변환 중", current=index, total=total_unique)
