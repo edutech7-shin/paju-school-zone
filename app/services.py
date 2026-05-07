@@ -234,12 +234,69 @@ def _extract_tong_numbers(text: str) -> set[int]:
     return numbers
 
 
+def _extract_ri_numbers(text: str) -> dict[str, set[int]]:
+    """
+    "용미1~4리, 분수2~3리" 같은 문자열에서 리 이름별 번호 집합을 만든다.
+    """
+    values: dict[str, set[int]] = {}
+    normalized = clean_text(text)
+    for name, start_text, end_text in re.findall(r"([가-힣]+)\s*(\d+)(?:~(\d+))?리", normalized):
+        start = int(start_text)
+        end = int(end_text or start_text)
+        if start > end:
+            start, end = end, start
+        bucket = values.setdefault(name, set())
+        bucket.update(range(start, end + 1))
+    return values
+
+
+def _extract_ri_base_names(text: str) -> set[str]:
+    names: set[str] = set()
+    normalized = clean_text(text)
+    # "용미1~4리", "분수2리", "용미리" 형태 모두에서 기본 리 이름을 추출한다.
+    for name in re.findall(r"([가-힣]+)\s*\d+(?:~\d+)?리", normalized):
+        if name:
+            names.add(name)
+    for name in re.findall(r"([가-힣]+)리", normalized):
+        if name:
+            names.add(name)
+    return names
+
+
 def _tong_matches(student_tong: str, candidate_tong: str) -> bool:
     student_numbers = _extract_tong_numbers(student_tong)
     candidate_numbers = _extract_tong_numbers(candidate_tong)
     if not student_numbers or not candidate_numbers:
         return False
     return bool(student_numbers & candidate_numbers)
+
+
+def _tong_or_ri_matches(student_tong: str, candidate_tong: str) -> bool:
+    # 기존 통(通) 비교
+    if _tong_matches(student_tong, candidate_tong):
+        return True
+
+    # 리(里) 비교: 같은 리 이름 + 번호 교집합이 있으면 일치로 본다.
+    student_ri = _extract_ri_numbers(student_tong)
+    candidate_ri = _extract_ri_numbers(candidate_tong)
+    if student_ri and candidate_ri:
+        for name, student_numbers in student_ri.items():
+            if name in candidate_ri and (student_numbers & candidate_ri[name]):
+                return True
+
+    # "용미리" vs "용미1~4리"처럼 번호가 없는 리 이름만 있어도 같은 리면 일치 처리
+    student_ri_bases = _extract_ri_base_names(student_tong)
+    candidate_ri_bases = _extract_ri_base_names(candidate_tong)
+    if student_ri_bases and candidate_ri_bases and (student_ri_bases & candidate_ri_bases):
+        return True
+
+    # 범위 파싱이 불가능한 경우를 위한 최소 문자열 포함 비교
+    student_compact = compact_text(student_tong)
+    candidate_compact = compact_text(candidate_tong)
+    if student_compact and candidate_compact:
+        if student_compact in candidate_compact or candidate_compact in student_compact:
+            return True
+    return False
 
 
 def _parse_school_names(text: str) -> set[str]:
@@ -251,7 +308,7 @@ def _is_joint_zone_pair(requested_row: dict[str, Any], actual_row: dict[str, Any
         return False
     if requested_row.get("admin_area") != actual_row.get("admin_area"):
         return False
-    if not _tong_matches(requested_row.get("tong_ri", ""), actual_row.get("tong_ri", "")):
+    if not _tong_or_ri_matches(requested_row.get("tong_ri", ""), actual_row.get("tong_ri", "")):
         return False
     if compact_text(requested_row.get("extra_area", "")) != compact_text(actual_row.get("extra_area", "")):
         return False
@@ -275,8 +332,8 @@ def _rule_zone_rank(
     zone_token_matches = sum(1 for token in record.get("zone_tokens", []) if token and token in address_compact)
     building_token_matches = sum(1 for token in building_tokens if token and token in zone_compact)
     has_admin_match = int(bool(admin_area and record["admin_area"] == admin_area))
-    has_tong_match = int(bool(tong_number and _tong_matches(tong_ri, zone_text)))
-    has_tong_text_match = int(bool(tong_ri and compact_text(tong_ri) in record["tong_key"]))
+    has_tong_match = int(bool(_tong_or_ri_matches(tong_ri, zone_text)))
+    has_tong_text_match = int(bool(tong_ri and _tong_or_ri_matches(tong_ri, zone_text)))
     has_zone_text_in_address = int(bool(zone_compact and zone_compact in address_compact))
     return (
         has_admin_match,
@@ -398,6 +455,19 @@ def _admin_lookup_from_dataset(address_text: str, building_name: str, context: A
             best = max(parcel_candidates, key=rank_candidate)
             record = best
             return record["admin_area"], record["tong_ri"], record["ban"], record
+
+    # 면 단위 리 주소 fallback:
+    # 지번 세부 번지가 관할표에 누락되어도 같은 '리'로 행정동을 식별할 수 있으면
+    # 해당 리를 기준으로 학구 매칭이 가능하도록 admin_area/tong_ri를 보정한다.
+    legal_area = clean_text(parsed_parcel.get("legal_area", ""))
+    if legal_area and legal_area.endswith("리"):
+        ri_records = [record for record in context.admin_records if record.get("legal_area") == legal_area]
+        if ri_records:
+            admin_area = next((r.get("admin_area", "") for r in ri_records if "면" in clean_text(r.get("admin_area", ""))), "")
+            if not admin_area:
+                admin_area = ri_records[0].get("admin_area", "")
+            # 리 이름을 tong_ri로 사용해 용미리/분수리 같은 면단위 학구를 폭넓게 포함한다.
+            return admin_area, legal_area, "", None
 
     if building_tokens or address_tokens:
         for record in context.admin_records:
@@ -536,6 +606,15 @@ def classify_student(student: dict[str, Any], context: AppContext, school_name: 
         ):
             report_match = requested_report_match
             actual_school_name = requested_school_name
+        elif (
+            requested_report_match.get("row_number")
+            and requested_school_name
+            and requested_school_name != actual_school_name
+            and _tong_or_ri_matches(tong_ri, requested_report_match.get("tong_ri", ""))
+        ):
+            # 면/리 단위 주소는 번지 누락이 잦으므로, 요청학교의 리 매칭이 성립하면 요청학교를 우선한다.
+            report_match = requested_report_match
+            actual_school_name = requested_school_name
     school_alignment_status = "일치"
     zone_match_status = school_zone_match.get("zone_status", "학교미분류")
     match_status = report_match.get("status", "미분류")
@@ -592,11 +671,10 @@ def match_report_row(
     if admin_area:
         candidate_rows = [record for record in candidate_rows if record["admin_area"] == admin_area]
 
-    tong_number = _extract_tong_number(tong_ri)
-    if tong_number:
+    if tong_ri:
         filtered = []
         for record in candidate_rows:
-            if _tong_matches(tong_ri, record["tong_ri"]):
+            if _tong_or_ri_matches(tong_ri, record["tong_ri"]):
                 filtered.append(record)
         if filtered:
             candidate_rows = filtered
