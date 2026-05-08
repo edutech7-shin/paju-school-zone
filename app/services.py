@@ -907,6 +907,32 @@ def _match_report_row_by_address_tokens(
     return {**scored[0][1], "status": "정확한매칭(주소토큰)", "reason": "요청학교 행의 주소 토큰 직접 일치"}
 
 
+def _student_list_dataframe(students: list[dict[str, Any]]) -> pd.DataFrame:
+    """
+    모든 산출물에서 공통으로 사용할 학생 목록 DataFrame.
+    학년/반/번호를 항상 앞에 고정해 누락되지 않게 한다.
+    """
+    rows = [
+        {
+            "학년": row.get("grade", ""),
+            "반": clean_text(row.get("homeroom_ban", "")),
+            "번호": clean_text(row.get("attendance_no", "")),
+            "성명": row.get("name", ""),
+            "우편번호": clean_text(row.get("postal_code", "")),
+            "도로명주소": clean_text(row.get("road_address", "")),
+            "지번주소": clean_text(row.get("jibun_address", "")),
+            "행정동": clean_text(row.get("admin_area", "")),
+            "통리": clean_text(row.get("tong_ri", "")),
+            "학교명": clean_text(row.get("school_name", "")),
+            "학교매칭": clean_text(row.get("zone_match_status", "")),
+            "행매칭": clean_text(row.get("match_status", "")),
+            "매칭사유": clean_text(row.get("match_reason", "")),
+        }
+        for row in students
+    ]
+    return pd.DataFrame(rows)
+
+
 def build_report(processed_students: list[dict[str, Any]], school_name: str = "", base_date: str = "") -> dict[str, Any]:
     context = get_context()
     config = load_admin_config()
@@ -936,6 +962,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         aggregate[(sheet_name, row_number)]["계"] += 1
 
     output = BytesIO()
+    all_students_df = _student_list_dataframe(processed_students)
     if template_path and os.path.exists(template_path):
         workbook = load_workbook(template_path)
         if display_base_date:
@@ -957,6 +984,12 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
             for offset, column in enumerate(GRADE_COLUMNS):
                 ws.cell(row=row_number, column=start_col + offset, value=row_data[column])
             ws.cell(row=row_number, column=total_col, value=row_data["계"])
+        if "학생처리목록" in workbook.sheetnames:
+            del workbook["학생처리목록"]
+        ws_students = workbook.create_sheet("학생처리목록")
+        ws_students.append(list(all_students_df.columns))
+        for row in all_students_df.itertuples(index=False, name=None):
+            ws_students.append(list(row))
         workbook.save(output)
     else:
         fallback_rows = list(aggregate.values())
@@ -964,6 +997,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
         fallback_df = pd.DataFrame(fallback_rows)
         with pd.ExcelWriter(output, engine="openpyxl") as writer:
             fallback_df.to_excel(writer, sheet_name="집계결과", index=False)
+            all_students_df.to_excel(writer, sheet_name="학생처리목록", index=False)
             if display_base_date:
                 pd.DataFrame([{"기준일": display_base_date}]).to_excel(writer, sheet_name="메타", index=False)
     output.seek(0)
@@ -974,7 +1008,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
     ]
     table_rows.sort(key=lambda row: (row["school_name"], row["admin_area"], row["tong_ri"], row["extra_area"]))
 
-    details_df = pd.DataFrame(processed_students)
+    details_df = all_students_df.copy()
     details_output = BytesIO()
     with pd.ExcelWriter(details_output, engine="openpyxl") as writer:
         details_df.to_excel(writer, sheet_name="students", index=False)
@@ -1076,6 +1110,8 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
             summary_bucket["계"] = sum(row["계"] for row in normal_and_special_rows)
 
         requested_output = BytesIO()
+        requested_students = [row for row in processed_students if row.get("school_name") == school_name]
+        requested_students_df = _student_list_dataframe(requested_students)
         if template_path and os.path.exists(template_path):
             requested_workbook = load_workbook(template_path)
             if display_base_date:
@@ -1097,6 +1133,12 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
                 for offset, column in enumerate(GRADE_COLUMNS):
                     ws.cell(row=row_number, column=start_col + offset, value=row_data[column])
                 ws.cell(row=row_number, column=total_col, value=row_data["계"])
+            if "학생처리목록" in requested_workbook.sheetnames:
+                del requested_workbook["학생처리목록"]
+            ws_students = requested_workbook.create_sheet("학생처리목록")
+            ws_students.append(list(requested_students_df.columns))
+            for row in requested_students_df.itertuples(index=False, name=None):
+                ws_students.append(list(row))
             requested_workbook.save(requested_output)
         else:
             requested_rows = list(requested_aggregate.values())
@@ -1104,6 +1146,7 @@ def build_report(processed_students: list[dict[str, Any]], school_name: str = ""
             requested_df = pd.DataFrame(requested_rows)
             with pd.ExcelWriter(requested_output, engine="openpyxl") as writer:
                 requested_df.to_excel(writer, sheet_name="우리학교집계", index=False)
+                requested_students_df.to_excel(writer, sheet_name="학생처리목록", index=False)
                 if display_base_date:
                     pd.DataFrame([{"기준일": display_base_date}]).to_excel(writer, sheet_name="메타", index=False)
         requested_output.seek(0)
@@ -1185,6 +1228,8 @@ def build_jibun_export_workbook(students: list[dict[str, Any]]) -> bytes:
         rows.append(
             {
                 "학년": student.get("grade", ""),
+                "반": clean_text(student.get("homeroom_ban", "")),
+                "번호": clean_text(student.get("attendance_no", "")),
                 "성명": student.get("name", ""),
                 "우편번호": clean_text(student.get("postal_code", "")),
                 "도로명주소": clean_text(student.get("road_address", "")),
