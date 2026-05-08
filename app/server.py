@@ -9,12 +9,15 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import os
 import traceback
+from uuid import uuid4
 from urllib.parse import urlparse
 from urllib.parse import quote
 
 from .config import STATIC_DIR, TEMPLATE_DIR, load_admin_config
+from .config import save_admin_config_override
 from .datasets import ensure_datasets
 from .services import (
+    clear_context_cache,
     get_context,
     get_download,
     get_job,
@@ -399,6 +402,34 @@ class AppHandler(BaseHTTPRequestHandler):
                 "CONTENT_TYPE": self.headers.get("Content-Type", ""),
             },
         )
+
+        # (선택) 붙임 파일 업로드가 있으면 런타임 오버라이드로 반영한다.
+        overrides: dict[str, str] = {}
+        runtime_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "runtime", "sources")
+        os.makedirs(runtime_dir, exist_ok=True)
+
+        if "report_template" in form and getattr(form["report_template"], "file", None):
+            field = form["report_template"]
+            filename = getattr(field, "filename", "") or ""
+            if filename:
+                dest = os.path.join(runtime_dir, f"{uuid4().hex}__report_template.xlsx")
+                with open(dest, "wb") as out:
+                    out.write(field.file.read())
+                overrides["report_template_source"] = dest
+
+        if "admin_district" in form and getattr(form["admin_district"], "file", None):
+            field = form["admin_district"]
+            filename = getattr(field, "filename", "") or ""
+            if filename:
+                dest = os.path.join(runtime_dir, f"{uuid4().hex}__admin_district.xlsx")
+                with open(dest, "wb") as out:
+                    out.write(field.file.read())
+                overrides["admin_source"] = dest
+
+        if overrides:
+            save_admin_config_override(overrides)
+            clear_context_cache()
+            ensure_datasets()
 
         files = []
         if "files" in form:

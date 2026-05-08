@@ -8,9 +8,9 @@
     "cleanup_interval_seconds": 300
   },
   "data_sources": {
-    "admin_source": "/Users/khami/Documents/addressConvert/통학구역별 재학생 현황 보고/[붙임 2] 파주시 통·리·반 명칭 및 관할구역표.xlsx",
-    "report_template_source": "/Users/khami/Documents/addressConvert/통학구역별 재학생 현황 보고/[붙임 1] 초등학교 통학구역별 재학생 현황 서식(파주).xlsx",
-    "school_zone_source": "/Users/khami/Documents/addressConvert/통학구역별 재학생 현황 보고/2026학년도 파주시 초등학교 통학구역 일람표.xlsx",
-    "legacy_district_source": "/Users/khami/Documents/addressConvert/관할구역.xlsx"
+    "admin_source": "통학구역별 재학생 현황 보고/[붙임 2] 파주시 통·리·반 명칭 및 관할구역표.xlsx",
+    "report_template_source": "통학구역별 재학생 현황 보고/[붙임 1] 초등학교 통학구역별 재학생 현황 서식(파주).xlsx",
+    "school_zone_source": "",
+    "legacy_district_source": ""
   }
 }

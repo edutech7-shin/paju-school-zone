@@ -4,6 +4,7 @@ from urllib.parse import quote
 
 from flask import Flask, Response, jsonify, request
 
+from app.config import save_admin_config_override
 from app.datasets import ensure_datasets
 from app.server import (
     render_address_convert_page,
@@ -12,6 +13,7 @@ from app.server import (
     render_progress_page,
 )
 from app.services import (
+    clear_context_cache,
     get_download,
     get_job,
     get_result_data,
@@ -19,6 +21,8 @@ from app.services import (
     start_job,
     start_job_address_conversion,
 )
+import os
+from uuid import uuid4
 
 
 app = Flask(__name__, static_folder="../static", static_url_path="/static")
@@ -79,6 +83,29 @@ def address_result_page(result_id: str) -> Response:
 
 @app.post("/process")
 def process_files() -> Response:
+    # (선택) 붙임 파일 업로드가 있으면 런타임 오버라이드로 반영한다.
+    overrides: dict[str, str] = {}
+    runtime_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "runtime", "sources")
+    os.makedirs(runtime_dir, exist_ok=True)
+
+    report_template = request.files.get("report_template")
+    if report_template and report_template.filename:
+        dest = os.path.join(runtime_dir, f"{uuid4().hex}__report_template.xlsx")
+        report_template.save(dest)
+        overrides["report_template_source"] = dest
+
+    admin_district = request.files.get("admin_district")
+    if admin_district and admin_district.filename:
+        dest = os.path.join(runtime_dir, f"{uuid4().hex}__admin_district.xlsx")
+        admin_district.save(dest)
+        overrides["admin_source"] = dest
+
+    if overrides:
+        save_admin_config_override(overrides)
+        clear_context_cache()
+        # 다음 요청부터도 반영되도록 데이터셋을 갱신
+        ensure_datasets()
+
     files = []
     for item in request.files.getlist("files"):
         if not item:

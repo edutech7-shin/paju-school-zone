@@ -6,6 +6,7 @@ from io import BytesIO
 import math
 import numbers
 import os
+import tempfile
 import re
 import threading
 import time
@@ -111,7 +112,7 @@ def _resolve_report_template_path(source_path: str) -> str:
     if not template_url:
         return ""
 
-    cache_dir = os.path.join("/tmp", "addressConvert", "templates")
+    cache_dir = os.path.join(tempfile.gettempdir(), "addressConvert", "templates")
     os.makedirs(cache_dir, exist_ok=True)
     cached_template_path = os.path.join(cache_dir, "report_template.xlsx")
     if os.path.exists(cached_template_path):
